@@ -1,0 +1,104 @@
+header{
+    margin: auto;
+    width: 1200px;
+}
+.banner-top,.banner-top a{
+    background-color: #f28500;
+    height: 50px;
+    align-content: center;
+    display: flex;
+    flex-wrap:wrap ;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;   
+}
+.top-custom,.top-custom a{
+    text-align: right;
+    background-color: #00142d;
+    padding: 10px;
+}
+.top-pic{
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+.top-custom a{
+    text-decoration: none;
+    color: #fff;
+    margin-right: 50px;
+}
+.custom-menu,.menu-list{
+    margin: 10px 0px 10px 0px;
+    align-items: center;
+    display: flex;  
+    list-style-type: none;
+    text-align: center;
+}
+.logo{
+    display: inline-block;
+    margin: 10px;
+    width: 160px;
+    height: 30px;
+}
+.list a{
+    width: 100px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin: 0px 0px 0px 10px;
+}
+
+.try-btn{
+    background-color: blue;
+    color: #fff;
+    text-decoration: none;
+    display:inline-block ;
+    text-align: center;
+    margin-left: 100px;
+    border-radius: 30px;
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+}
+.custom-head{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #00142d;
+    color: #fff;
+    padding-top: 70px;
+    height: 500px;
+}
+.head-artcle{
+    width: 600px;
+    font-size: 30px;
+}
+.head-artcle h2{
+    font-size: 15px;
+}
+.head-span{
+    color: green;
+    
+}
+form{
+    margin-top: 60px;
+    display: flex;
+}
+input{
+    height: 50px;
+    width: 400px;
+    font-size: 20px;
+}
+form.try-btn{
+    margin-right: 200px;;
+}
+.first-title{
+    font-size: 25px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+p{
+    font-size: 15px;
+}
