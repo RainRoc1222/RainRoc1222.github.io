@@ -17,7 +17,7 @@ header{
     color: black;
     text-decoration: none;
 }
-.dope{
+.title{
     display: flex;
     background-color: #00142d;
     color: aliceblue;
@@ -29,7 +29,7 @@ header{
     background-color: #fff;
     width: 1200px;
 }
-.dope2{
+.title2{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -89,13 +89,13 @@ header{
 .end{
     width: 1200px;
 }
-.solo{
+.first{
     display: flex;
     flex-wrap: wrap;
     width: 1200px;
     margin: 10px;
 }
-.battle{
+.second{
     width:500px;
 }
 .picc img{
