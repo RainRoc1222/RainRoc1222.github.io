@@ -136,6 +136,7 @@ p{
 }
 .first-list{
     width: 260px;
+    margin-top: 10px;
 }
 .list-span{
     background-color:#97CBFF;
@@ -149,5 +150,6 @@ p{
     color: blue;
     text-decoration: none;
 }
-.see-more{
+img{
+    width: 560px;
 }
