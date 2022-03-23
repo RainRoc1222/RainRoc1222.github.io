@@ -69,11 +69,11 @@ header{
     padding-top: 70px;
     height: 500px;
 }
-.head-artcle{
+.head-article{
     width: 600px;
     font-size: 30px;
 }
-.head-artcle h2{
+.head-article h2{
     font-size: 15px;
 }
 .head-span{
@@ -89,8 +89,17 @@ input{
     width: 400px;
     font-size: 20px;
 }
-form.try-btn{
-    margin-right: 200px;;
+.free-btn{
+    margin-left:10px;
+    background-color: blue;
+    color: #fff;
+    text-decoration: none;
+    display:inline-block ;
+    text-align: center;
+    border-radius: 30px;
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
 }
 .first-title{
     font-size: 25px;
@@ -101,4 +110,44 @@ form.try-btn{
 }
 p{
     font-size: 15px;
+}
+.first-art h3{
+    font-size: 30px;
+}
+
+.first-art{
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+.art-title{
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 40px;
+}
+.art-ul{ 
+    list-style: none;
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0px;
+}
+.first-list{
+    width: 260px;
+}
+.list-span{
+    background-color:#97CBFF;
+    border-radius: 30px;
+    color: blue;
+    display: inline-block;
+    width: 15px;
+}
+.art-a{
+    display: flex;
+    color: blue;
+    text-decoration: none;
+}
+.see-more{
 }
