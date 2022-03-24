@@ -1,402 +1,740 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <style>
-header{
-    width: 1200px;
+    <title>SHOPLINE 全球智慧開店平台｜完整開店功能讓你的生意不斷</title>
+        <style>
+            header{
     margin: auto;
-}
-.meidum{
     width: 1200px;
-    background-color: #CCC;
+}
+.banner-top,.banner-top a{
+    background-color: #f28500;
+    height: 50px;
+    align-content: center;
     display: flex;
+    flex-wrap:wrap ;
     justify-content: center;
-    flex-wrap: wrap;
+    text-decoration: none;
+    color: #fff;   
 }
-.meidum img{
-    width: 150px;
+.top-custom,.top-custom a{
+    text-align: right;
+    background-color: #00142d;
+    padding: 10px;
 }
-.meidum a{
-    width: 150px;
+.top-pic{
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+.top-custom a{
+    text-decoration: none;
+    color: #fff;
+    margin-right: 50px;
+}
+.custom-menu,.menu-list{
+    margin: 10px 0px 10px 0px;
+    align-items: center;
+    display: flex;  
+    list-style-type: none;
+    text-align: center;
+}
+.logo{
+    display: inline-block;
+    margin: 10px;
+    width: 160px;
+    height: 30px;
+}
+.list a{
+    width: 100px;
+    text-decoration: none;
     color: black;
+    display: block;
+    margin: 0px 0px 0px 10px;
+}
+
+.try-btn{
+    background-color: blue;
+    color: #fff;
+    text-decoration: none;
+    display:inline-block ;
+    text-align: center;
+    margin-left: 100px;
+    border-radius: 30px;
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+}
+.custom-head{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #00142d;
+    color: #fff;
+    padding-top: 70px;
+    height: 500px;
+}
+.head-article{
+    width: 600px;
+    font-size: 30px;
+}
+img{
+    width: 560px;
+}
+.head-article h2{
+    font-size: 15px;
+}
+.head-span{
+    color: green;
+    
+}
+form{
+    margin-top: 60px;
+    display: flex;
+}
+input{
+    height: 50px;
+    width: 400px;
+    font-size: 20px;
+}
+.free-btn{
+    margin-left:10px;
+    background-color: blue;
+    color: #fff;
+    text-decoration: none;
+    display:inline-block ;
+    text-align: center;
+    border-radius: 30px;
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+}
+.first-title{
+    font-size: 25px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+p{
+    font-size: 15px;
+}
+.first-art h3{
+    font-size: 30px;
+}
+
+.first-art{
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.art-title{
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 40px;
+}
+.art-ul{ 
+    list-style: none;
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0px;
+}
+.first-list{
+    width: 260px;
+    margin-top: 10px;
+}
+.list-span{
+    background-color:#97CBFF;
+    border-radius: 30px;
+    color: blue;
+    display: inline-block;
+    width: 15px;
+}
+.art-a{
+    display: flex;
+    color: blue;
     text-decoration: none;
 }
-.title{
-    display: flex;
-    background-color: #00142d;
-    color: aliceblue;
-    justify-content: space-around;
-    width: 1200px;
-}
-.breaking{
-    text-align: center;
-    background-color: #fff;
-    width: 1200px;
-}
-.title2{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 1200px;
-}
-.dope2.pic img{
-    width: 600px;
-    display: flex;
-}
-.col{
-    width: 500px;
-    display: flex;
-    flex-wrap: wrap;
-}
-.can{
-    width: 240px;
-    padding: 5px;
-}
-.meidum2{
-    text-align: center;
+.more-service{
     background-color: #CCC;
-    width: 1200px;
-}
-.breaking2{
-    display: flex;
-    margin: auto;
-    flex-wrap: wrap;
-    width: 1200px;
-}
-.col2{
-    flex-wrap: wrap;
-    width: 320px;
-    padding: 40px;
-}
-.col2 p {
-    text-align: left;
-} 
-.test{
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.service-title h2{
+    font-size: 30px;
+    padding: 30px 0px 10px 0px;
     width: 1200px;
 }
-.test span{
+.service-pic{
+    width: 70px;
+    height: 70px;
+    padding-top: 15px;
+}
+.service-list ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0px;
+    justify-content: space-evenly;
+}
+.service-list ul li{
+    width: 300px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.service-list{
+    width: 1200px;  
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.list-group p{
+    text-align: left;
+}
+.group-pic{
+    background-color: #fff;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+.show-case{
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+.show-title{
+    text-align: center;
+}
+.show-title span{
     color: blue;
 }
-.test2{
+.show-title h2{
+    font-size: 30px;
+}
+.show-pic{
     display: flex;
-    flex-wrap: wrap;
-    width: 1200px;
     justify-content: space-around;
+    margin-bottom: 40px
 }
-.test2 div img{
-    width: 180px;
-    height: 180px;
-    justify-content: center;
-    padding: 30px;
+.show-pic img{
+    width: 100px;
+    height: 100px;
 }
-.end{
-    width: 1200px;
-}
-.first{
+.show-art{
     display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.show-content{
+    width: 500px;
     flex-wrap: wrap;
-    width: 1200px;
-    margin: 10px;
+    height: 300px;
 }
-.second{
-    width:500px;
+.show-content a{
+    text-decoration: none;
+    color: blue;
 }
-.picc img{
-    width: 690px;
+.show-p,.show-p-too{
+    margin-top: 100px;
 }
-footer{
+.content-pic{
+    height: 280px;
+}
+.art-span{
+    background: blue;
+    color: #fff;
+    display: inline-block;
+    height: 20px;
+}
+.footer-map{
+    justify-content: space-evenly;
+    font-size: 20px;
+    display: flex;
+}
+.map-art{
+    width: 600px;
+    color: #fff;
+    margin-top: 50px;
+    margin-left: 70px;
+}
+.map-pic{
+    width: 550px;
+    margin-top: 50px;
+}
+.map-btn{
+    background-color: blue;
+    border-radius: 30px;
+    width: 300px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 40px;
+}
+.map-art a{
+    color: #fff;
+    text-decoration: none;
+}
+.footer-service{
+    background-color: #00142d;
     width: 1200px;
     margin: auto;
 }
-.battle p{
+.footer-col{
+    color: #CCC;
+    width: 150px;
+}
+.footer-col ul{
+    list-style: none;
+    padding-left: 0px;
+}
+.footer-menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.col-title{
+    color: #fff;
+    text-align: left;
+}
+.col-list{
+    margin-top: 20px;
+}
+.footer-wrap{
+    display: flex;
+    justify-content: space-around;
+}
+.wrap-list a{
+    text-decoration: none;
+    color: #fff;
+}
+.wrap-group ul{
+    display: flex;
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 50px;
+}
+.wrap-list{
+    padding: 10px;
+}
+.COVID-19 a{
+    text-decoration: none;
+    color: black;
+    margin-right: 0px;
+    display: flex;
+    background-color: #D7FFEE;
+    width: 200px;
+    padding: 5px;
+    margin-left: 970px;
     margin-top: 60px;
+    margin-bottom: 60px;
+    justify-content: center;
+    height: 30px;
 }
-.end2{
-    display: flex;
-    flex-wrap: wrap;
-    width: 1200px;
-    background-color: #00142d;
-    justify-content: space-around;
+.service-time{
+    color: #FFF;
 }
-.end2 div{
-    justify-content: space-around;
-    color: #fff;
-    width: 600px;
+.link-group a img{
+    width: 25px;
+    height: 25px;
+    margin-top: 8px;
+    margin-left: 8px;
 }
-.footer-list{
-    width: 1200px;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #00142d;
-    color: #fff;
-    justify-content: space-between;
+.link-group a{
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-left: 20px;
 }
-.footer-list h3{
-    width: 150px;
-    padding: 10px;
+.link-group{
+    margin-top: 20px;
+    width: 500px;
 }
-.footer-list p{
-    width: 150px;
-    padding: 10px;
-    color: #ccc; ;
-}
-
-    </style>
+        </style>
 </head>
-
 <body>
     <header>
-        <div class="top">
-            <div class="meidum">
-                    <img src="https://img.shoplineapp.com/media/image_clips/60811bb98a60d74a03808d4d/original.png?1619073977" alt="">
-                    <a href="">開店服務</a>
-                    <a href="">方案費用</a>
-                    <a href="">客戶案例</a>
-                    <a href="">開店說明會</a>
-                    <a href="">開店諮詢</a>
-                    <a href="">更多解決方案</a>
-                    <a href="">其他資源</a>
-            </div>
-            <div class="title">
-                <div>
-                    <h1>想在哪開店創業？<br> 社群購物貼近顧客零距離</h1>
-                    <p>超過 35 萬品牌使用！從個人賣家到國際品牌，都能以 SHOPLINE 實現全通路<br>零售，快速拓展市場到世界各地，輕鬆開始你的『 店 』商生意！</p>
-                    <p>請在此輸入電子信箱(可隨時更換)<button type="submit" >免費試用</button></p>
-                </div>
-                <div class="pic">
-                    <img src="https://shoplineimg.com/59c0fd06080f0690b5000cd1/6191b397e9f2f00026722389/630x.webp?source_format=png">
-                </div>
-            </div>
-            <div class="breaking">
-                <h1>單一平台就能助你在 <br>全通路輕鬆開店創業</h1>
-                <p>從網路商店架站到實體門市管理，只需要一個平台，就能輕鬆實現開店創業，<br> 並能同步管理所有銷售管道，SHOPLINE 助你賣得更多、賣得更好!</p>
-            </div>
-            <div class="title2">
-                <div>
-                    <h1>免寫程式、多款版型<br> 輕鬆打造全能電商網站</h1>
-                    <p>不會寫程式也能輕鬆架設品牌電商官網！任何產業都能找到合適的專業設<br>計版型，以滑鼠拖曳就能完成網頁編輯，讓架設網站就像堆積木一樣簡<br>單。</p>
-                    <ul class="col">
-                        <li class="can">豐富版型主題與字型搭配</li>
-                        <li class="can">RWD 響應式網頁設計</li>
-                        <li class="can">獨有網址 ＆ SSL 安全憑證</li>
-                        <li class="can">SEO 搜尋引擎優化</li>
-                        <li class="can">一頁商店</li>
-                        <li class="can">開放 HTML／CSS 編輯</li>
-                        <a href="https://shopline.tw/online-store-setup?utm_source=google&utm_medium=cpc&utm_campaign=B:Street:TW:Shopline-2&utm_content=B:brand:shopline&gclid=CjwKCAjw8sCRBhA6EiwA6_IF4RawxGKtTZ0Imsk_JL-DXRMIUsXazAmk2x475-7WqKi4LzZDpG5wRBoCl3oQAvD_BwE">看看開店秘技</a>
-                    </ul>
-                </div>
-                <div class="pic">
-                    <img src="https://shoplineimg.com/59c0fd06080f0690b5000cd1/60b0c566ec23b10026db7112/540x.webp?source_format=png">
-                </div>
-            </div>
-            <div class="title2">
-                <div class="pic">
-                    <img src="https://picsum.photos/400/300/?random=10">
-                </div>
-                <div>
-                    <h1>支持海內外電商<br> 金流、物流一次搞定</h1>
-                    <p>支持在地及國際金流、物流串接服務，提供海內外顧客最便利的付款及送 <br> 貨服務，加速消費者完成下單交易，大幅降低購物車放棄率！</p>
-                    <ul class="col">
-                        <li class="can">線上信用卡刷卡</li>
-                        <li class="can">第三方金流／行動支付整合</li>
-                        <li class="can">超商代碼／條碼繳費</li>
-                        <li class="can">多溫層宅配並指定運費</li>
-                        <li class="can">超商／宅配貨到付款</li>
-                        <li class="can">發票開立與串接</li>
-                        <a href="https://shopline.tw/features/online-store?utm_source=google&utm_medium=cpc&utm_campaign=B:Street:TW:Shopline-2&utm_content=B:brand:shopline&gclid=CjwKCAjw8sCRBhA6EiwA6_IF4RawxGKtTZ0Imsk_JL-DXRMIUsXazAmk2x475-7WqKi4LzZDpG5wRBoCl3oQAvD_BwE#payments-and-shipping">了解更多金物流</a>
-                    </ul>
-                </div>
-            </div>
-            <div class="title2">
-                <div>
-                    <h1>刺激下單，創造回購<br>行銷導流、促購模組任你玩</h1>
-                    <p>多元優惠活動、會員集客機制、網紅分潤以及直播購物等豐富功能，將電 <br>商行銷玩法一網打盡，助你成功優化行銷活動成效，刺激顧客下單、吸引 <br>鐵粉回購！</p>
-                    <ul class="col">
-                        <li class="can">超過 20 種優惠促銷功能</li>
-                        <li class="can">社群直播購物系統</li>
-                        <li class="can">會員分級／點數／購物金</li>
-                        <li class="can">Facebook／Google／LINE 廣告追蹤</li>
-                        <li class="can">Instagram 購物功能</li>
-                        <li class="can">Facebook／Instagram／LINE 對話式購物</li>
-                        <a href="https://shopline.tw/features/online-store?utm_source=google&utm_medium=cpc&utm_campaign=B:Street:TW:Shopline-2&utm_content=B:brand:shopline&gclid=CjwKCAjw8sCRBhA6EiwA6_IF4RawxGKtTZ0Imsk_JL-DXRMIUsXazAmk2x475-7WqKi4LzZDpG5wRBoCl3oQAvD_BwE#promotion">看更多優惠模組</a>
-                    </ul>
-                </div>
-                <div class="pic">
-                    <img src="https://picsum.photos/400/300/?random=10">
-                </div>
-            </div>
-            <div class="title2">
-                <div class="pic">
-                    <img src="https://picsum.photos/400/300/?random=10">
-                </div>
-                <div>
-                    <h1>O2O 全通路無縫整併<br>輕鬆管理網店、門市以及其他通路</h1>
-                    <p>不論是網店拓展門市，還是門市想發展網路生意，從商品、庫存、訂單等<br>各項虛實店舖的資料都能完善整併，輕鬆實現全通路會員經營到多店營<br>運。</p>
-                    <ul class="col">
-                        <li class="can">門市 POS 系統</li>
-                        <li class="can">線上線下會員／商品／庫存整合</li>
-                        <li class="can">門市快速集客工具</li>
-                        <li class="can">O2O 即時銷售報表分析</li>
-                        <li class="can">進銷庫存／調撥／多店管理</li>
-                        <li class="can">串接 Shopee 蝦皮購物庫存</li>
-                        <a href="https://shopline.tw/features/online-store?utm_source=google&utm_medium=cpc&utm_campaign=B:Street:TW:Shopline-2&utm_content=B:brand:shopline&gclid=CjwKCAjw8sCRBhA6EiwA6_IF4RawxGKtTZ0Imsk_JL-DXRMIUsXazAmk2x475-7WqKi4LzZDpG5wRBoCl3oQAvD_BwE#multi-channels">了解更多全通路整合</a>
-                    </ul>
-                </div>
+        <div class="banner-top">
+            <a href="">你開業，我補貼!價值超過10萬補助與您齊心抗疫☞</a>
         </div>
+        <div class="top-custom">
+            <div>
+                <img class="top-pic" src="https://ae01.alicdn.com/kf/He5b738313d4e43ce969ca2edcf2757a7f.jpg" alt="">
+                <a class="help-center" href="">幫助中心</a>
+                <a class="login-in" href="">登入網店</a>
+            </div>
+        </div>
+        <div class="custom-menu">
+            <img class="logo" src="https://img.shoplineapp.com/media/image_clips/60811bb98a60d74a03808d4d/original.png?1619073977" alt="">
+            <div>
+                <nav class="first-menu">
+                    <ul class="menu-list">
+                        <li class="list">
+                            <a href="#">開店服務</a>
+                        </li>
+                        <li class="list">
+                            <a href="#">方案費用</a>
+                        </li>
+                        <li class="list">
+                            <a href="#">客戶案例</a>
+                        </li>
+                        <li class="list">
+                            <a href="#">開店說明會</a>
+                        </li>
+                        <li class="list">
+                            <a href="#">開店諮詢</a>
+                        </li>
+                        <li class="list">
+                            <a href="#">更多解決方案</a>
+                        </li>
+                        <li class="list">
+                            <a href="#">其他資源</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="try-free">
+                <a class="try-btn" href="#">免費試用</a>
+            </div>
+        </div>
+        <section class="custom-head">
+            <div class="head-article">
+                <h1>想在哪開店創業？ <br>
+                    <span class="head-span">網路開店一站式輕鬆開賣|</span>
+                </h1>
+                <h2>
+                    超過 35 萬品牌使用！從個人賣家到國際品牌，都能以 SHOPLINE 實現全通路零售，快速拓展市場到世界各地，輕鬆開始你的『 店 』商生意！
+                </h2>
+                <form action="">
+                    <label for="">
+                        <input value="請在此輸入電子信箱(可隨時更換)" type="email">
+                    </label>    
+                    <div class="try-free">
+                        <a class="free-btn" href="#">免費試用</a>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <img src="https://shoplineimg.com/59c0fd06080f0690b5000cd1/6191b397e9f2f00026722389/505x.webp?source_format=png" alt="">
+            </div>
+        </section>
+        <section class="custom-title">
+            <div class="first-title">
+                <h2>單一平台就能助你 <br>在全通路輕鬆開店創業</h2>
+                <p>從網路商店架站到實體門市管理，只需要一個平台，就能輕鬆實現開店創業， <br> 並能同步管理所有銷售管道，SHOPLINE 助你賣得更多、賣得更好！</p>
+            </div>
+            <div class="first-art">
+                <div class="art-title">
+                    <h3>免寫程式、多款版型 <br> 輕鬆打造全能電商網站</h3>
+                    <p>不會寫程式也能輕鬆架設品牌電商官網！任何產業都能找到合適的專業設
+                        計版型，以滑鼠拖曳就能完成網頁編輯，讓架設網站就像堆積木一樣簡
+                        單。</p>
+                    <ul class="art-ul">
+                        <li class="first-list"><span class="list-span">√</span> 豐富版型主題與字型搭配</li>
+                        <li class="first-list"><span class="list-span">√</span> RWD 響應式網頁設計</li>
+                        <li class="first-list"><span class="list-span">√</span>獨有網址 ＆ SSL 安全憑證</li>
+                        <li class="first-list"><span class="list-span">√</span>SEO 搜尋引擎優化</li>
+                        <li class="first-list"><span class="list-span">√</span>一頁商店</li>
+                        <li class="first-list"><span class="list-span">√</span>開放 HTML／CSS 編輯</li>
+                    </ul>
+                    <div class="see-more">
+                        <a class="art-a" href="#">查看更多 →</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://shoplineimg.com/59c0fd06080f0690b5000cd1/60b0c566ec23b10026db7112/540x.webp?source_format=png" alt="">
+                </div>
+            </div>
+            <div class="first-art">
+                <div>
+                    <img src="https://img.shoplineapp.com/media/image_clips/60a4d354a8bff100235bea59/original.png?1621414740" alt="">
+                </div>
+                <div class="art-title">
+                    <h3>支持海內外電商 <br> 金流、物流一次搞定</h3>
+                    <p>支持在地及國際金流、物流串接服務，提供海內外顧客最便利的付款及送貨服務，加速消費者完成下單交易，大幅降低購物車放棄率！</p>
+                    <ul class="art-ul">
+                        <li class="first-list"><span class="list-span">√</span>線上信用卡刷卡</li>
+                        <li class="first-list"><span class="list-span">√</span>第三方金流／行動支付整合</li>
+                        <li class="first-list"><span class="list-span">√</span>超商代碼／條碼繳費</li>
+                        <li class="first-list"><span class="list-span">√</span>多溫層宅配並指定運費</li>
+                        <li class="first-list"><span class="list-span">√</span>超商／宅配貨到付款</li>
+                        <li class="first-list"><span class="list-span">√</span>發票開立與串接</li>
+                    </ul>
+                    <div class="see-more">
+                        <a class="art-a" href="#">了解更多金物流 →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="first-art">
+                <div class="art-title">
+                    <h3>刺激下單，創造回購<br>行銷導流、促購模組任你玩</h3>
+                    <p>多元優惠活動、會員集客機制、網紅分潤以及直播購物等豐富功能，將電商行銷玩法一網打盡，助你成功優化行銷活動成效，刺激顧客下單、吸引鐵粉回購！</p>
+                    <ul class="art-ul">
+                        <li class="first-list"><span class="list-span">√</span>超過 20 種優惠促銷功能</li>
+                        <li class="first-list"><span class="list-span">√</span>社群直播購物系統</li>
+                        <li class="first-list"><span class="list-span">√</span>會員分級／點數／購物金</li>
+                        <li class="first-list"><span class="list-span">√</span>Facebook／Google／LINE 廣告追蹤</li>
+                        <li class="first-list"><span class="list-span">√</span>Instagram 購物功能</li>
+                        <li class="first-list"><span class="list-span">√</span>Facebook／Instagram／LINE 對話式購物</li>
+                    </ul>
+                    <div class="see-more">
+                        <a class="art-a" href="#">看更多優惠模組 →</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://img.shoplineapp.com/media/image_clips/60a4d354df356c0012a8a223/original.png?1621414740" alt="">
+                </div>
+            </div>
+            <div class="first-art">
+                <div>
+                    <img src="https://img.shoplineapp.com/media/image_clips/60a4d3540289ef002f2150cb/original.png?1621414740" alt="">
+                </div>
+                <div class="art-title">
+                    <h3>O2O 全通路無縫整併<br>輕鬆管理網店、門市以及其他通路</h3>
+                    <p>不論是網店拓展門市，還是門市想發展網路生意，從商品、庫存、訂單等各項虛實店舖的資料都能完善整併，輕鬆實現全通路會員經營到多店營運。</p>
+                    <ul class="art-ul">
+                        <li class="first-list"><span class="list-span">√</span>門市 POS 系統</li>
+                        <li class="first-list"><span class="list-span">√</span>線上線下會員／商品／庫存整合</li>
+                        <li class="first-list"><span class="list-span">√</span>門市快速集客工具</li>
+                        <li class="first-list"><span class="list-span">√</span>O2O 即時銷售報表分析</li>
+                        <li class="first-list"><span class="list-span">√</span>進銷庫存／調撥／多店管理</li>
+                        <li class="first-list"><span class="list-span">√</span>串接 Shopee 蝦皮購物庫存</li>
+                    </ul>
+                    <div class="see-more">
+                        <a class="art-a" href="#">了解更多全通路整合 →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="more-service">
+            <div class="service-title">
+                <h2>更多功能與服務</h2>
+            </div>
+                    <div class="service-list">
+                <ul>
+                    <li>
+                        <div class="group-pic">
+                            <img class="service-pic" src="https://img.shoplineapp.com/media/image_clips/5efef5c3b774cf002ab000ce/original.png?1593767363" alt="">
+                        </div>
+                        <div class="list-group">
+                            <h3>強大庫存及訂單系統</h3>
+                            <p>從商品數量、貨況到訂單付款狀態、物流貨態一目瞭然，提升營運效率超有感。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="group-pic">
+                            <img class="service-pic" src="https://img.shoplineapp.com/media/image_clips/5efef5c4b774cf0027b00084/original.png?1593767364" alt="">
+                        </div>
+                        <div class="list-group">
+                            <h3>即時化商店業績分析</h3>
+                            <p>圖表化報表助你一手掌握商店概況，讓數據助攻企業成長，營運策略更有方向。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="group-pic">
+                            <img class="service-pic" src="https://img.shoplineapp.com/media/image_clips/5f34a2e10225e00039a716b9/original.png?1597285089" alt="">
+                        </div>
+                        <div class="list-group">
+                            <h3>多國語系、幣值切換</h3  >
+                            <p>想做跨境電商也ＯＫ！提供語言、幣別、稅金等進階功能，友善應對海外消費需求。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="group-pic">
+                            <img class="service-pic" src="https://img.shoplineapp.com/media/image_clips/5f34a2e11468c4003c7aace6/original.png?1597285089" alt="">
+                        </div>
+                        <div class="list-group">
+                            <h3>專業顧問線上支援</h3>
+                            <p>迅速、透明的溝通管道，協助你快速解決從線上到線下、從在地到海外的網店疑難。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="group-pic">
+                            <img class="service-pic" src="https://img.shoplineapp.com/media/image_clips/5f34a2e11468c472e47aa8e9/original.png?1597285089" alt="">
+                        </div>
+                        <div class="list-group">
+                            <h3>廣告行銷加值服務</h3>
+                            <p>由官方認證的專業投手團隊，協助品牌投遞 Facebook、Google、LINE 等廣告。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="group-pic">
+                            <img class="service-pic" src="https://img.shoplineapp.com/media/image_clips/5f34a2e16200760045e6138f/original.png?1597285089" alt="">
+                        </div>
+                        <div class="list-group">
+                            <h3>老闆專屬成長社群</h3>
+                            <p>致力為品牌店家打造能深度交流且互助的生態體系，是拓展人脈、商機的絕佳場域。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="show-case">
+            <div class="show-title">
+                <h2><span>人氣品牌</span>一致推薦使用</h2>
+            </div>
+            <div class="show-pic">
+                <img src="https://purerkai.github.io/Cutting/shopline/img/t1.png" alt="">
+                <img src="https://purerkai.github.io/Cutting/shopline/img/t2.png" alt="">
+                <img src="https://purerkai.github.io/Cutting/shopline/img/t3.png" alt="">
+                <img src="https://purerkai.github.io/Cutting/shopline/img/t4.png" alt="">
+                <img src="https://purerkai.github.io/Cutting/shopline/img/t5.png" alt="">
+            </div>
+            <hr>
+            <div class="show-art">
+                <div class="show-content">
+                    <div class="show-a">
+                        <a href="#">bonnyread.com.tw →</a>
+                    </div>
+                    <div class="show-p">
+                        <p>
+                            SHOPLINE在行動裝置上操作的順暢度很高;使用者給的建議與意見會採納，處裡的速度也不錯;還一直有新功能推出，不斷成長。
+                        </p>
+                    </div>
+                    <div class="show-p-too">
+                        <p class="manger">-BONNY & READ店長,Stan</p>
+                    </div>
+                </div>
+                <div> 
+                    <img class="content-pic" src="https://img.shoplineapp.com/media/image_clips/5f06bed2436e2b86c4471215/original.jpg?1594277585" alt="">
+                </div>
+            </div>
+        </section>
     </header>
     <footer>
-        <div class="meidum2">
-            <h1>更多功能與服務</h1>
-            <div class="breaking2">
-                <div class="col2">
-                    <img src="https://img.shoplineapp.com/media/image_clips/5efef5c3b774cf002ab000ce/original.png?1593767363" alt="">
-                    <h3>強大庫存及訂單系統</h3>
-                    <p>從商品數量、貨況到訂單付款狀態、物流貨態一目瞭然，提升營運效率超有感。</p>
+        <section class="footer-service">
+            <div class="footer-map">
+                <div class="map-art">
+                    <h2>全亞洲超過<br><span class="art-span">350,000</span>個品牌都在使用 SHOPLINE</h2>
+                    <span class="map-btn"><a href="#">免費試用14天 →</a> </span>
                 </div>
-                <div class="col2">
-                    <img src="https://img.shoplineapp.com/media/image_clips/5efef5c4b774cf0027b00084/original.png?1593767364" alt="">
-                    <h3>即時化商店業績分析</h3>
-                    <p>圖表化報表助你一手掌握商店概況，讓數據助攻企業成長，營運策略更有方向。</p>
-                </div>
-                <div class="col2">
-                    <img src="https://img.shoplineapp.com/media/image_clips/5f34a2e10225e00039a716b9/original.png?1597285089" alt="">
-                    <h3>多國語系、幣值切換</h3>
-                    <p>想做跨境電商也ＯＫ！提供語言、幣別、稅金等進階功能，友善應對海外消費需求。</p>
-                </div>
-                <div class="col2">
-                    <img src="https://img.shoplineapp.com/media/image_clips/5f34a2e11468c4003c7aace6/original.png?1597285089" alt="">
-                    <h3>專業顧問線上支援</h3>
-                    <p>迅速、透明的溝通管道，協助你快速解決從線上到線下、從在地到海外的網店疑難。</p>
-                </div>
-                <div class="col2">
-                    <img src="https://img.shoplineapp.com/media/image_clips/5f34a2e11468c472e47aa8e9/original.png?1597285089" alt="">
-                    <h3>廣告行銷加值服務</h3>
-                    <p>由官方認證的專業投手團隊，協助品牌投遞 Facebook、Google、LINE 等廣告</p>
-                </div>
-                <div class="col2">
-                    <img src="https://img.shoplineapp.com/media/image_clips/5f34a2e16200760045e6138f/original.png?1597285089" alt="">
-                    <h3>老闆專屬成長社群</h3>
-                    <p>致力為品牌店家打造能深度交流且互助的生態體系，是拓展人脈、商機的絕佳場域。</p>
+                <div class="map-pic">
+                    <img src="https://purerkai.github.io/Cutting/shopline/img/bg3.png" alt="">
                 </div>
             </div>
-        </div>
-        <div class="test">
-            <h1><span>人氣品牌</span>一致推薦使用</h1>
-        </div>
-        <div class="test2">
-            <div>
-                <img src="https://purerkai.github.io/Cutting/shopline/img/t1.png">
-            </div>
-            <div>
-                <img src="https://purerkai.github.io/Cutting/shopline/img/t2.png">
-            </div>
-            <div>
-                <img src="https://purerkai.github.io/Cutting/shopline/img/t3.png">
-            </div>
-            <div>
-                <img src="https://purerkai.github.io/Cutting/shopline/img/t4.png">
-            </div>
-            <div>
-                <img src="https://purerkai.github.io/Cutting/shopline/img/t5.png">
-            </div>
-        </div>
-        <div class="end">
-            <div class="first">
-                <div class="second">
-                    <a href="">bonnyread.com.tw</a>
-                    <p>SHOPLINE 在行動裝置上操作的順暢度很高；使用者給的建議與意見會採納，處理的速度也不錯；還一直有新功能推出，不斷成長。</p>
-                    <p> -Bonny & READ店長,Stan</p>
+            <div class="footer-menu">
+                <div class="footer-col">
+                    <h3 class="col-title">SHOPLINE</h3>
+                    <ul>
+                        <li class="col-list">關於我們</li>
+                        <li class="col-list">認識團隊</li>
+                        <li class="col-list">人才招募</li>
+                        <li class="col-list">合作機會</li>
+                        <li class="col-list">精選夥伴</li>
+                        <li class="col-list">媒體報導</li>
+                    </ul>
                 </div>
-                <div class="picc">
-                    <img src="https://img.shoplineapp.com/media/image_clips/5f06bed2436e2b86c4471215/original.jpg?1594277585" alt="">
+                <div class="footer-col">
+                    <h3 class="col-title">我要開店</h3>
+                    <ul>
+                        <li class="col-list">方案費用</li>
+                        <li class="col-list">功能模組</li>
+                        <li class="col-list">客戶案例</li>
+                        <li class="col-list">開店說明會</li>
+                        <li class="col-list">開店諮詢</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="col-title">功能特色</h3>
+                    <ul>
+                        <li class="col-list">網路開店</li>
+                        <li class="col-list">社群購物</li>
+                        <li class="col-list">零售 POS</li>
+                        <li class="col-list">網路商店</li>
+                        <li class="col-list">網站製作</li>
+                        <li class="col-list">電商物流</li>
+                        <li class="col-list">訂單管理</li>
+                        <li class="col-list">一頁商店</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="col-title">開店資源</h3>
+                    <ul>
+                        <li class="col-list">開店秘技</li>
+                        <li class="col-list">版型主題</li>
+                        <li class="col-list">新手問答</li>
+                        <li class="col-list">POS 硬體</li>
+                        <li class="col-list">最新功能</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="col-title">更多解決方案</h3>
+                    <ul>
+                        <li class="col-list">企業旗艦方案</li>
+                        <li class="col-list">跨境電商方案</li>
+                        <li class="col-list">廣告計畫方案</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="col-title">其他資源</h3>
+                    <ul>
+                        <li class="col-list">電商教室</li>
+                        <li class="col-list">充電工作坊</li>
+                        <li class="col-list">DreamBig 創品牌</li>
+                        <li class="col-list">電商成長學苑</li>
+                        <li class="col-list">SHOPLINE TRENDS 電商數據庫</li>
+                        <li class="col-list">LINE 官方帳號</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="col-title">應用案例</h3>
+                    <ul>
+                        <li class="col-list">SHOPLINE Payments</li>
+                        <li class="col-list">網紅口碑行銷方案</li>
+                        <li class="col-list">實體零售</li>
+                        <li class="col-list">IG 直播 +1</li>
+                        <li class="col-list">社群電商工具包</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <div class="end2">
-            <div>
-                <h1>全亞洲超過<br>350,000 個品牌都在使用 SHOPLINE</h1>
-                <p>免費試用 14 天</p>
+            <div class="COVID-19">
+                <a href="#">COVID-19應變措施</a>
             </div>
-            <div>
-                <img src="https://purerkai.github.io/Cutting/shopline/img/bg3.png">
+            <div class="footer-wrap">
+                <div class="wrap-group">
+                    <ul>
+                        <li class="wrap-list"><a href="#">網站地圖</a></li>
+                        <li class="wrap-list"><a href="#">隱私權政策</a></li>
+                        <li class="wrap-list"><a href="#">會員條款</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <a href="#">
+                        <img src="img/fb.jpg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/in.jpg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/ig.jpg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/ss.jpg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/s.jpg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/email.jpg" alt="">
+                    </a>
+                </div>
+                <div class="service-time">
+                    <p>服務時間 星期一至五 上午 10 點至晚上 7 點
+                    <br>© Copyright 2013-22 SHOPLINE Limited.
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="footer-list">
-            <h3>SHOPLINE</h3>
-            <h3>我要開店</h3>
-            <h3>功能特色</h3>
-            <h3>開店資源</h3>
-            <h3>更多解決方案</h3>
-            <h3>其他資源</h3>
-            <h3>應用案例</h3>
-            <p>關於我們</p>
-            <p>方案費用</p>
-            <p>網路開店</p>
-            <p>開店秘技</p>
-            <p>企業旗艦方案</p>
-            <p>電商教室</p>
-            <p>金流與物流</p>
-            <p>認識團隊</p>
-            <p>功能模組</p>
-            <p>社群購物</p>
-            <p>版型主題</p>
-            <p>跨境電商方案</p>
-            <p>充電工作坊</p>
-            <p>SHOPLINE Payments</p>
-            <p>人才招募</p>
-            <p>客戶案例</p>
-            <p>零售 POS</p>
-            <p>新手問答</p>
-            <p>廣告計畫方案</p>
-            <p>DreamBig 創品牌</p>
-            <p>實體零售</p>
-            <p>合作機會</p>
-            <p>開店說明會</p>
-            <p>網路商店</p>
-            <p>POS 硬體</p>
-            <p></p>
-            <p>電商成長學苑</p>
-            <p>IG 直播 +1</p>
-            <p>媒體報導</p>
-            <p></p>
-            <p>電商物流</p>
-            <p></p>
-            <p></p>
-            <p>LINE 官方帳號</p>
-            <p>社群電商工具包</p>
-            <p></p>
-            <p></p>
-            <p>訂單管理</p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p>一頁商店</p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p>COVID-19 應變措施</p>
-            <div>網站地圖 | 隱私權政策 | 會員條款</div>
-            <div>服務時間 星期一至五 上午 10 點至晚上 7 點<br> ©Copyright 2013-22 SHOPLINE Limited.</div>
-        </div>
-    </div>
+        </section>
     </footer>
 </body>
-
 </html>
