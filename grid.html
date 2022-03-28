@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+.car-article,.safe-article,.comfortable-article,.user-article{
+    width: 900px;
+    height: 800px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(20,1fr);
+    grid-template-rows: repeat(20,1fr);
+    margin-top: 100px;
+}
+.color-block,.comfortable-block{
+    background-color: #ccc;
+    width: 400px;
+    height: 400px;
+    grid-area: 2 / 10 / 9 / 17;
+}
+.car-span,.comfortable-span{
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+    grid-area: 10 / 15 / 11 / 16;
+}
+.core,.third-core{
+    width: 400px;
+    height: 400px;
+    background-color: #00142d;
+    color: #fff;
+    font-size: 20px;
+    grid-area: 1 / 1 / 10 / 8;
+}
+
+h1{
+    background-color: red;
+    color: #fff;
+    font-size: 70px;
+    height: 100px;
+}
+.core-article{
+    padding: 20px;
+}
+.introduce,.third-introduce{
+    background-color: #ccc;
+    padding:20px;
+    width: 700px;
+    grid-area: 11 / 1 / 20 / 16;
+}
+.items{
+    background-color: black;
+    color:#fff;
+    width: 30px;
+    height: 20px;
+    border-radius: 2px;
+}
+h3{
+    color: red;
+}
+.car-pic,.comfortable-pic{
+    grid-area: 4 / 5 / 14 / 19;
+}
+.safe-span,.user-span{
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+    grid-area:10 / 4 / 11 / 6;
+}
+.second-introduce,.four-introduce{
+    background-color: #ccc;
+    padding:20px;
+    width: 700px;
+    grid-area:13 / 7 / 18 / 20;
+}
+.second-core,.four-core{
+    width: 400px;
+    height: 400px;
+    background-color: #00142d;
+    color: #fff;
+    font-size: 20px;
+    grid-area: 1 / 13 / 10 / 20;
+}
+.safe-block,.user-block{
+    background-color: #ccc;
+    width: 400px;
+    height: 400px;
+    grid-area: 2 / 11 / 12 / 18;
+}
+.safe-pic,.user-pic{
+    grid-area: 4 / 5 / 14 / 16;
+}
+    </style>
+</head>
+<body>
+    <section class="car">
+        <div class="car-article">
+            <div class="color-block">
+            </div>
+            <div class="car-pic">
+                <img src="https://picsum.photos/600/400/?random=10">
+            </div>
+            <span class="car-span">▶</span>
+            <div class="core">
+                <h1>01操控樂趣</h1>
+                <div class="core-article">
+                    <h2>人人滿意的駕駛體驗</h2>
+                    <p>透過最佳重量分配，實現平順起步、直線穩定加速，過彎同時保持車身平穩，帶給駕駛更靈敏的道路反饋，享受隨心馳騁的行駛快感。</p>
+                </div>
+            </div>
+            <div class="introduce">
+                    <h3>我們做了些革新—————————————————————————</h3>
+                    <span class="items">駕駛位置最佳化
+                    </span>
+                    <p>●針對駕駛位置進行徹底的改修，讓駕駛者可如同握手般自然且舒適地操控方向盤。</p>
+                    <span class="items">駕駛視野佳
+                    </span>
+                    <p>●考量駕駛坐進車內的高度，透過前擋風玻璃位置的調整，達到忙區極小化，使駕駛視野更開闊，同步提升駕駛安全。</p>
+                    <span class="items">更寧靜的車室內
+                    </span>
+                    <p>●採用最西三層結構的隔音材料，與引擎、變速箱的零件改革，將座艙的震動抑制在最小限度，提供乘客舒適安靜的感受。</p>
+            </div>
+        </div>
+    </section>
+    <section class="safe">
+        <div class="safe-article">
+            <div class="safe-block">
+            </div>
+            <div class="safe-pic">
+                <img src="https://picsum.photos/600/400/?random=10">
+            </div>
+            <span class="safe-span">▶</span>
+            <div class="second-core">
+                <h1>安全守護02</h1>
+                <div class="second-core-article">
+                    <h2>行車更安心的高剛性車體</h2>
+                    <p>您的愛車會妥善保護您，強悍穩固的車身可使您安全無虞。世界級的安全功能讓您輕鬆自如享受旅程、毫無後顧之憂。</p>
+                </div>
+            </div>
+            <div class="second-introduce">
+                    <h3>我們做了些革新—————————————————————————</h3>
+                    <span class="items">主動安全
+                    </span>
+                    <p>●以先進的TSS系統，主動偵測路況，輔助駕駛判斷路況並維持行車安全。</p>
+                    <span class="items">被動安全
+                    </span>
+                    <p>●堅固的高剛性車體，使用熱沖壓材料的高強度抗紐鋼板，強化做窗對意外事故的保護力。</p>
+            </div>
+        </div>
+    </section>
+    <section class="comfortable">
+        <div class="comfortable-article">
+            <div class="comfortable-block">
+            </div>
+            <div class="comfortable-pic">
+                <img src="https://picsum.photos/600/400/?random=10">
+            </div>
+            <span class="comfortable-span">▶</span>
+            <div class="third-core">
+                <h1>03乘坐舒服</h1>
+                <div class="core-article">
+                    <h2>令人放鬆舒適的車室空間</h2>
+                    <p>車室空間設計注重人體工學，透過方向盤、踏板等位置優化，追求更舒適的駕駛位置，並以新型座椅設計，提高座椅包覆性，致力實現長途駕駛不疲勞的舒適駕駛體驗。</p>
+                </div>
+            </div>
+            <div class="third-introduce">
+                    <h3>我們做了些革新—————————————————————————</h3>
+                    <span class="items">駕駛位置最佳化
+                    </span>
+                    <p>●針對駕駛位置進行徹底的改修，讓駕駛者可如同握手般自然且舒適地操控方向盤。</p>
+                    <span class="items">駕駛視野佳
+                    </span>
+                    <p>●考量駕駛坐進車內的高度，透過前擋風玻璃位置的調整，達到忙區極小化，使駕駛視野更開闊，同步提升駕駛安全。</p>
+                    <span class="items">更寧靜的車室內
+                    </span>
+                    <p>●採用最西三層結構的隔音材料，與引擎、變速箱的零件改革，將座艙的震動抑制在最小限度，提供乘客舒適安靜的感受。</p>
+            </div>
+        </div>
+    </section>
+</section>
+<section class="user">
+    <div class="user-article">
+        <div class="user-block">
+        </div>
+        <div class="user-pic">
+            <img src="https://picsum.photos/600/400/?random=10">
+        </div>
+        <span class="user-span">▶</span>
+        <div class="four-core">
+            <h1>以人為本04</h1>
+            <div class="core-article">
+                <h2>使用者導向的貼心設計</h2>
+                <p>您的愛車會妥善保護您，強悍穩固的車身可使您安全無虞。世界級的安全功能讓您輕鬆自如享受旅程、毫無後顧之憂。</p>
+            </div>
+        </div>
+        <div class="four-introduce">
+                <h3>我們做了些革新—————————————————————————</h3>
+                <span class="items">主動安全
+                </span>
+                <p>●以先進的TSS系統，主動偵測路況，輔助駕駛判斷路況並維持行車安全。</p>
+                <span class="items">被動安全
+                </span>
+                <p>●堅固的高剛性車體，使用熱沖壓材料的高強度抗紐鋼板，強化做窗對意外事故的保護力。</p>
+        </div>
+    </div>
+</section>
+</body>
+</html>
