@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #main{
+            width: 900px;
+            margin: auto;
+            height: 700px;
+            border: 1px solid black;
+        }
+        #me,#name,#email,#school,#interest{
+            margin: auto;
+            width: 300px;
+            margin-top: 10px;
+        }
+        #pic{
+            display: flex;
+            width: 900px;
+            justify-content: space-evenly;
+            margin-top: 30px;
+        }
+        .pic-img{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="me">
+            <img id="me-pic" src="" alt="">
+        </div>
+        <div id="name">
+            <h3>姓名</h3>
+            <p id="name-p"></p>
+        </div>
+        <div id="email">
+            <h3>email</h3>
+            <p id="email-p"></p>
+        </div>
+        <div id="school">
+            <h3>學校</h3>
+            <p id="school-p"></p>
+        </div>
+        <div id="interest">
+            <h3>興趣</h3>
+            <p id="interest-p"></p>
+        </div>
+        <div id="pic">
+            <img class="pic-img" src="" alt="">
+            <img class="pic-img" src="" alt="">
+            <img class="pic-img" src="" alt="">
+        </div>
+    </div>
+
+
+    <script>
+        let me = document.getElementById("me-pic");
+        const meURL = "https://raw.githubusercontent.com/RainRoc1222/RainRoc1222.github.io/main/%E4%B8%8B%E8%BC%89.png";
+        me.setAttribute("src",meURL);
+        let introduce = ["張添宇","不告訴你","社會大學","DJ、跳舞、唱歌"];
+        document.getElementById("name-p").innerText = introduce[0];
+        document.getElementById("email-p").innerText =  introduce[1];
+        document.getElementById("school-p").innerText =  introduce[2];
+        document.getElementById("interest-p").innerText =  introduce[3];
+
+        let pic = document.querySelectorAll(".pic-img");
+        const picArray = [
+            "https://raw.githubusercontent.com/RainRoc1222/RainRoc1222.github.io/7e6c331ca59625539297b283d8913c9a4a6e74a9/%E4%B8%8B%E8%BC%89.jpg",
+            "https://raw.githubusercontent.com/RainRoc1222/RainRoc1222.github.io/main/P2139975.jpeg",
+            "https://raw.githubusercontent.com/RainRoc1222/RainRoc1222.github.io/7e6c331ca59625539297b283d8913c9a4a6e74a9/496427f976a6a.jpg",
+        ];
+        picArray.forEach((t,index)=>{pic[index].setAttribute("src",picArray[index])});
+
+    </script>
+</body>
+</html>
