@@ -5,11 +5,158 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHOPLINE 全球智慧開店平台|完整的開店功能讓你的生意不斷成長</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/bd19956bb2.js" crossorigin="anonymous"></script>
     <style>
         *{
     margin: 0;
+    padding: 0;
+}
+.intercom{
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    background-color: rgb(235, 235, 235);
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    align-self: center;
+}
+.intercom a{
+    text-decoration: none;
+    color: #000;
+    display: block;
+    padding-top: 10px;
+}
+.intercom-span{
+    width: 60%;
+    height: 30px;
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+}
+.intercom-span:hover{
+    background-color: rgb(169, 169, 169);
+}
+.check{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(99, 228, 99);
+    color: #fff;
+    text-align: center;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+.check-span{
+    font-size: 20px;
+}
+.p-sapn{
+    color: #60a7e6;
+}
+.check{
+    width: 10%;
+    align-self: center;
+}
+.check-p{
+    width: calc(90% - 10px);
+    box-sizing: border-box;
+}
+.sent-btn{
+    background-color: blue;
+    color: #fff;
+    text-align: center;
+    border-radius: 25px;
+    height: 40px;
+    width: 180px;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.sent-content{
+    display: flex;
+    justify-content: space-evenly;
+}
+.sent-span{
+    width: 33.333333%;
+}
+.sent-span img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.sent-span:nth-child(2n),
+.sent-span:nth-child(3n){
+    margin-left: -30px;
+}
+#open,
+.message-open{
+    display: none;
+}
+#open:checked ~ .message-open{
+    display: block;
+    z-index: 1;
+    width: 350px;
+    height: 600px;
+    background-color: #fff;
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    border-radius: 10px;
+}
+.message-title{
+    background-color: rgb(80, 157, 252);
+    border-radius: 10px;
+    padding: 20px 20px;
+    color: #fff;
+    padding-bottom: 50px;
+}
+.message-title h4{
+    font-size: 30px;
+    padding: 10px 0;
+}
+.message-p{
+    font-size: 30px;
+}
+.message-content{
+    background-color: #fff;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -40px;
+    border-radius: 5px;
+    border-top: 2px solid rgb(37, 52, 213);
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.message-content2{
+    background-color: #fff;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    border-radius: 5px;
+    border-top: 2px solid rgb(37, 52, 213);
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.message-content p{
+    width: 100%;
+    padding: 10px;
+}
+.sent{
+    width: 50%;
+}
+.reply{
+    width: 50%;
+}
+.reply p{
     padding: 0;
 }
 header{
@@ -353,17 +500,27 @@ h3{
     font-size: 25px;
     padding: 50px 20px 10px 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 ul[class*="service-ul"]{
     display: block;
     list-style: none;
-    color: #ccc;
+}
+.service-ul{
+    width: 14%;
 }
 .service-li{
     padding-top: 25px;
     padding-right: 5px;
     font-size: 12px;
+}
+.service-li a{
+    text-decoration: none;
+    color: #ccc;
+}
+.service-li a:hover{
+    color: blue;
 }
 .service-col{
     width: 14%;
@@ -389,15 +546,23 @@ ul[class*="service-ul"]{
 }
 
 .covid-19{
-    background-color: #DFFFDF;
-    padding: 5px 10px;
-    margin-top: 180px;
-    text-align: center;
+    background-color: #00142d;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
 }
 .covid-19 a{
+    display: block;
+    background-color: #DFFFDF;
     text-decoration: none;
     color: black;
-    font-size: 13px;
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    padding-top: 10px;
+    margin-right: 60px;
+    margin-bottom: 30px;
 }
 .another{
     width: 30%;
@@ -405,9 +570,6 @@ ul[class*="service-ul"]{
     flex-wrap: wrap;
     font-size: 15px;
     margin-top: 30px;
-}
-.another2{
-    display: none;
 }
 .another a{
     text-align: center;
@@ -465,6 +627,15 @@ ul[class*="service-ul"]{
     display: flex;
 }
 @media screen and (max-width:992px){
+    .home-intro{
+        padding: 20px 30px;
+    }
+    .home-introbox{
+        padding: 20px 30px;
+    }
+    .intro-title p{
+        width: 100%;
+    }
     .custom-head{
         display: none;
     }
@@ -614,29 +785,25 @@ ul[class*="service-ul"]{
     #li-ctrl7:checked ~ .service .service-ul7,
     .brand-article,
     .home-foot,
-    .another2,
     .foot-wrap{
         display: block;
-    }
-    .covid-19{
-        background-color: #DFFFDF;
-        margin: auto;
-        text-align: center;
-        width: 70%;
-        margin-top: 30px;
-        padding: 10px 20px;
     }
     .covid-19 a{
         text-decoration: none;
         color: black;
         font-size: 20px;
+        width: 70%;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
     .web-link{
         width: 70%;
+        order: -1;
     }
-    .map2,
-    .privacy2,
-    .member2{
+    .map,
+    .privacy,
+    .member{
         color: #fff;
         text-decoration: none;
         width: 100%;
@@ -644,20 +811,25 @@ ul[class*="service-ul"]{
         text-align: center;
         padding: 20px 0;
     }
-    .another a{
-        width: 100%;
-        padding: 20px 0;
-    }
     .privacy::before,
     .privacy::after,
-    .custom-banner .submit,
-    .another{
+    .custom-banner .submit{
     display: none;
     }
     .choose{
         display: flex;
         background-color: #041223;
         padding: 20px;
+    }
+    .another{
+        width: 100%;
+    }
+    .another a{
+        margin-top: 0;
+    }
+    .foot-wrap{
+        flex-direction: column;
+        display: flex;
     }
 }
     </style>
@@ -666,12 +838,43 @@ ul[class*="service-ul"]{
     <header>
         <input type="checkbox" name="" id="close">
         <input type="checkbox" name="" id="menu">
-        <div class="message">
+        <input type="checkbox" name="" id="open">
+        <div class="message-open">
+            <div class="message-title">
+                <h4>SHOPLINE</h4>
+                <p class="message-p">你好👋</p>
+                <p>不要懷疑，這裡會有真人回覆你的留言!<br>😎</p>
+            </div>
+            <div class="message-content">
+                <p>開始對話</p>
+                <div class="sent">
+                    <div class="sent-content">
+                        <div class="sent-span"><img src="https://picsum.photos/300/200/?random=10"> </div>
+                        <div class="sent-span"><img src="https://picsum.photos/300/200/?random=11"> </div>
+                        <div class="sent-span"><img src="https://picsum.photos/300/200/?random=12"> </div>
+                    </div>
+                </div>
+                <div class="reply">
+                    <p>我們通常的回覆時間 <br>⏱不到20分鐘</p>
+                </div>
+                <div class="time"></div>
+                <button class="sent-btn">▶ 傳訊息給我們</button>
+            </div>
+            <div class="message-content2">
+                <div class="check"><span class="check-span">✓</span></div>
+                <div class="check-p"><span class="p-sapn">Status:All Systems Operational</span><br>Updated Apr 6,21:00 HKT</div>
+            </div>
+            <div class="intercom">
+                <a class="intercom-a" href="#"><span class="intercom-span">☎我們在Intercom上運行 </span></a>
+            </div>
+        </div>
+        <label class="open-ctrl" for="open"><div class="message">
             <i class="fa-solid fa-message"></i>
+        </label>
         </div>
         <div class="main-banner">
             <div class="visa-banner">
-                <a href="#"><span class="visa-span">Visa用戶專享!1萬5千元開店補助支持您數位轉型從零到一 ☞
+                <a href="#"><span class="visa-span">Visa用戶專享!1萬5千元開店補助支持您數位轉型從零到一 👉
                 </span></a>
                 <div class="close-btn"><label for="close" class="banner-close">X</label></div>
             </div>  
@@ -916,79 +1119,79 @@ ul[class*="service-ul"]{
             <div class="service-col">
                 <label for="li-ctrl1"><h4>SHOPLINE</h4></label>
                 <ul class="service-ul1">
-                    <li class="service-li">關於我們</li>
-                    <li class="service-li">認識團隊</li>
-                    <li class="service-li">人才招募</li>
-                    <li class="service-li">合作機會</li>
-                    <li class="service-li">精選夥伴</li>
-                    <li class="service-li">媒體報導</li>
+                    <li class="service-li"><a href="#">關於我們</a></li>
+                    <li class="service-li"><a href="#">認識團隊</a></li>
+                    <li class="service-li"><a href="#">人才招募</a></li>
+                    <li class="service-li"><a href="#">合作機會</a></li>
+                    <li class="service-li"><a href="#">精選夥伴</a></li>
+                    <li class="service-li"><a href="#">媒體報導</a></li>
                 </ul>
             </div>
             <div class="service-col">
                 <label for="li-ctrl2"><h4>我要開店</h4></label>
                 <ul class="service-ul2">
-                    <li class="service-li">方案費用</li>
-                    <li class="service-li">功能模組</li>
-                    <li class="service-li">客戶案例</li>
-                    <li class="service-li">開店說明會</li>
-                    <li class="service-li">開店諮詢</li>
+                    <li class="service-li"><a href="#">方案費用</a></li>
+                    <li class="service-li"><a href="#">功能模組</a></li>
+                    <li class="service-li"><a href="#">客戶案例</a></li>
+                    <li class="service-li"><a href="#">開店說明會</a></li>
+                    <li class="service-li"><a href="#">開店諮詢</a></li>
                 </ul>
             </div>
             <div class="service-col">
                 <label for="li-ctrl3"><h4>功能特色</h4></label>
                 <ul class="service-ul3">
-                    <li class="service-li">網路開店</li>
-                    <li class="service-li">社群購物</li>
-                    <li class="service-li">零售 POS</li>
-                    <li class="service-li">網路商店</li>
-                    <li class="service-li">網站製作</li>
-                    <li class="service-li">電商物流</li>
-                    <li class="service-li">訂單管理</li>
-                    <li class="service-li">一頁商店</li>
+                    <li class="service-li"><a href="#">網路開店</a></li>
+                    <li class="service-li"><a href="#">社群購物</a></li>
+                    <li class="service-li"><a href="#">零售 POS</a></li>
+                    <li class="service-li"><a href="#">網路商店</a></li>
+                    <li class="service-li"><a href="#">網站製作</a></li>
+                    <li class="service-li"><a href="#">電商物流</a></li>
+                    <li class="service-li"><a href="#">訂單管理</a></li>
+                    <li class="service-li"><a href="#">一頁商店</a></li>
                 </ul>
             </div>
             <div class="service-col">
                 <label for="li-ctrl4"><h4>開店資源</h4></label>
                 <ul class="service-ul4">
-                    <li class="service-li">開店秘技</li>
-                    <li class="service-li">版型主題</li>
-                    <li class="service-li">新手問答</li>
-                    <li class="service-li">POS 硬體</li>
-                    <li class="service-li">最新功能</li>
+                    <li class="service-li"><a href="#">開店秘技</a></li>
+                    <li class="service-li"><a href="#">版型主題</a></li>
+                    <li class="service-li"><a href="#">新手問答</a></li>
+                    <li class="service-li"><a href="#">POS 硬體</a></li>
+                    <li class="service-li"><a href="#">最新功能</a></li>
                 </ul>
             </div>
             <div class="service-col">
                 <label for="li-ctrl5"><h4>更多解決方案</h4></label>
                 <ul class="service-ul5">
-                    <li class="service-li">企業旗艦方案</li>
-                    <li class="service-li">跨境電商方案</li>
-                    <li class="service-li">廣告計畫方案</li>
+                    <li class="service-li"><a href="#">企業旗艦方案</a></li>
+                    <li class="service-li"><a href="#">跨境電商方案</a></li>
+                    <li class="service-li"><a href="#">廣告計畫方案</a></li>
                 </ul>
             </div>
             <div class="service-col">
                 <label for="li-ctrl6"><h4>其他資源</h4></label>
                 <ul class="service-ul6">
-                    <li class="service-li">電商教室</li>
-                    <li class="service-li">充電工作坊</li>
-                    <li class="service-li">DreamBig 創品牌</li>
-                    <li class="service-li">電商成長學苑</li>
-                    <li class="service-li">SHOPLINE TRENDS 電商數據庫</li>
-                    <li class="service-li">LINE 官方帳號</li>
+                    <li class="service-li"><a href="#">電商教室</a></li>
+                    <li class="service-li"><a href="#">充電工作坊</a></li>
+                    <li class="service-li"><a href="#">DreamBig 創品牌</a></li>
+                    <li class="service-li"><a href="#">電商成長學苑</a></li>
+                    <li class="service-li"><a href="#">SHOPLINE TRENDS 電商數據庫</a></li>
+                    <li class="service-li"><a href="#">LINE 官方帳號</a></li>
                 </ul>
             </div>
             <div class="service-col">
                 <label for="li-ctrl7"><h4>應用案例</h4></label>
                 <ul class="service-ul7">
-                    <li class="service-li">SHOPLINE Payments</li>
-                    <li class="service-li">網紅口碑行銷方案</li>
-                    <li class="service-li">實體零售</li>
-                    <li class="service-li">IG 直播 +1</li>
-                    <li class="service-li">社群電商工具包</li>
-                </ul>
-                <div class="covid-19">
-                    <a href="#">COVID-19 應變措施</a>
-                </div> 
+                    <li class="service-li"><a href="#">SHOPLINE Payments</a></li>
+                    <li class="service-li"><a href="#">網紅口碑行銷方案</a></li>
+                    <li class="service-li"><a href="#">實體零售</a></li>
+                    <li class="service-li"><a href="#">IG 直播 +1</a></li>
+                    <li class="service-li"><a href="#">社群電商工具包</a></li>
+                </ul> 
             </div>
+        </div>
+        <div class="covid-19">
+            <a href="#">COVID-19 應變措施</a>
         </div>
         <div class="foot-wrap">
             <div class="another">
@@ -1015,11 +1218,6 @@ ul[class*="service-ul"]{
                 <a href="#">
                     <i class="fa-regular fa-envelope"></i>
                 </a>
-            </div>
-            <div class="another2">
-                <a class="map2" href="#">網站地圖</a>
-                <a class="privacy2" href="#">隱私權政策</a>
-                <a class="member2" href="#">會員條款</a>
             </div>
             <div class="service-time">
                 <p>服務時間 星期一至五 上午 10 點至晚上 7 點<br>© Copyright 2013-22 SHOPLINE Limited.</p>
