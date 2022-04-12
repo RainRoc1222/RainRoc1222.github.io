@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>寶可夢圖鑑列表</h1>
+    <button id='loadall' onclick="allPokemon()">Load All</button>
+    <button id='addone' onclick="AddPokemon()">Click +1</button>
+    <button id='removeone' onclick="removePokemon()">Click -1</button>
+    <button id="reset" onclick="resetPokemon()">Reset</button>
+
+    <div id="container">
+
+    </div>
+
+
+    <script>
+        let container;
+        let i = 0;
+        window.onload = function(){
+            container = document.getElementById("container");
+        }
+
+        function AddPokemon(){
+            i++;
+            let filename = i.toString().padStart(3,"0");
+            let pathfile = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${filename}.png`;
+            let img = document.createElement("img");
+            img.setAttribute("src",pathfile);
+            container.append(img);
+            if(i>898){
+                container.removeChild(container.lastChild);
+            }
+        }
+        function allPokemon(){
+            for(let i = 1;i <= 898; i++){
+                let filename = i.toString().padStart(3,"0");
+                let pathfile=`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${filename}.png`;
+                let img = document.createElement("img");
+                img.setAttribute("src",pathfile);
+                
+                container.append(img);
+            }
+        }
+        function removePokemon(){
+            container.removeChild(container.lastChild);
+            i-=1;
+        }
+        function resetPokemon(){
+            container.innerHTML = " ";
+            i = 0;
+        }
+    </script>
+</body>
+</html>
