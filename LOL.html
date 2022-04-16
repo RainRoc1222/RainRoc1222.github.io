@@ -2179,11 +2179,11 @@
                 alert("從DOM建立英雄人物陣列資料成功！");
                 //1.從DOM建立英雄人物資料
                 let group = container.querySelectorAll(".card");
-                group.forEach((item,index)=>{
+                group.forEach((content,index)=>{
                     let num = index +1;
-                    let id = item.querySelector(".card-title").innerText;
-                    let text = document.querySelector(".card-title").innerText;
-                    let url = document.querySelector(".card-img-top").src;
+                    let id = content.querySelector(".card-title").innerText;
+                    let text = content.querySelector(".card-text").innerText;
+                    let url = content.querySelector(".card-img-top").src;
                     let hero = {
                         "index" : num,
                         "id" : id,
