@@ -9,6 +9,28 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <style>
+        .row{
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+        th{
+            text-align: center;
+        }
+        td{
+            text-align: center;
+            background-color: #ccc;
+            border: solid #000 1px ;
+        }
+        td:nth-of-type(even){
+            background-color: #fff;
+        }
+        table{
+            width: 100%;
+        }
+        thead{
+            background-color: #000;
+            color: #fff;
+        }
         img {
             max-height: 100%;
             max-width: 100%;
@@ -2163,9 +2185,9 @@
         crossorigin="anonymous"></script>
 
     <script>
-
+        let titleArray = ["英雄名稱","英雄介紹","網址"];
         let heroArray = [];
-        let container;
+        let container;  
         let btnCreateHeroArray, btnListHero, btnTableHero;
 
         window.onload = function () {
@@ -2178,6 +2200,13 @@
                 //alert("從DOM建立英雄人物陣列資料後清除container");
                 alert("從DOM建立英雄人物陣列資料成功！");
                 //1.從DOM建立英雄人物資料
+                HeroArray();
+                //2.清除container
+                document.querySelector("#container").innerHTML =" ";
+                
+            });
+            
+            function HeroArray(){
                 let group = container.querySelectorAll(".card");
                 group.forEach((content,index)=>{
                     let num = index +1;
@@ -2192,12 +2221,7 @@
                     }
                     heroArray.push(hero);
                 })
-
-                //2.清除container
-                document.querySelector("#container").innerHTML = "";
-                
-            });
-
+            }
 
             btnListHero.addEventListener("click", function () {
                 if(heroArray.length==0){
@@ -2213,7 +2237,25 @@
                 
             });
 
+            function CreateTitle(){
+                let tr = document.createElement("tr");
+                titleArray.forEach((title)=>{
+                    let th = document.createElement("th");
+                    th.innerText = title;
+                    tr.append(th);
+                    thead.append(tr);
+                    table.append(thead);
+                })
+            }
+            let table = document.createElement("table");
+            let tbody = document.createElement("tbody");
+            let thead = document.createElement("thead");
+
+
             btnTableHero.addEventListener("click", function(){
+                document.querySelector("#container").innerHTML = " ";
+                table.append(thead,tbody);
+                container.append(table)
                 if(heroArray.length==0){
                     alert("請先建立陣列資料");
                     return;
@@ -2221,7 +2263,24 @@
                 
                 alert("以表格呈現英雄人物資料！");
             });
-        }
+            CreateTitle();
+            HeroArray();
+            heroArray.forEach((hero)=>{
+                let tr = document.createElement("tr");
+                let id = document.createElement("td");
+                id.innerText = hero.id;
+                let text = document.createElement("td");
+                text.innerText = hero.text;
+                let url = document.createElement("td");
+                url.innerText = hero.url;
+                tr.append(id,text,url);
+                tbody.append(tr);
+                table.append(tbody);
+                container.append(table);
+            })
+}
+
+
 
     </script>
 
