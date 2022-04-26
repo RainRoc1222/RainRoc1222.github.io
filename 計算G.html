@@ -56,7 +56,7 @@ input{
         <button class="btn btn-primary" onclick="send()">=</button>
         <button class="btn num" id="0" onclick="qqq(this.id)">0</button>
         <button class="btn num btn-" id="." onclick="qqq(this.id)">.</button>
-        <button class="btn btn-success" onclick="zzz()">%</button>
+        <button class="btn btn-success" onclick="fff()">%</button>
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
@@ -82,11 +82,11 @@ input{
     function sss(){
         box.value += "/";
     }
-    function zzz(){
-        box.value += "%";
-    }
     function send(){
         box.value = eval(box.value);
+    }
+    function fff(){
+        box.value = Math.sqrt(box.value);
     }
     function remove(){
         box.value = box.value.substring(0,box.value.length-1);
