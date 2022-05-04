@@ -1,0 +1,10 @@
+{
+    "iPadPro":{
+        "color":["太空灰色","銀色"],
+        "storage":["128GB","256GB","512GB","1TB"],
+        "price":["NT$24,900起","NT$28,000起","NT$34,200起","NT$46,600起","NT$59,000起"],
+        "wifi":["Wi-Fi","Wi-Fi+行動網路"],
+        "wifi-price":["NT$24,900起","NT$29,900起"],
+        "url":["https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617925790000","https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617912663000"]
+    }
+}
