@@ -1,6 +1,7 @@
 {
     "iPadPro":{
         "color":["太空灰色","銀色"],
+        "btn":["https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-space-gray-201508?wid=64&amp;hei=64&amp;fmt=png-alpha&amp;.v=0,"https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-silver-201508?wid=64&amp;hei=64&amp;fmt=png-alpha&amp;.v=0"],
         "storage":["128GB","256GB","512GB","1TB"],
         "price":["NT$24,900起","NT$28,000起","NT$34,200起","NT$46,600起","NT$59,000起"],
         "wifi":["Wi-Fi","Wi-Fi+行動網路"],
