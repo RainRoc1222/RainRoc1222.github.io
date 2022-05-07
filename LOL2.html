@@ -36,10 +36,10 @@
         .card {
             border: 1px solid black;
             margin-bottom: 30px;
-            overflow: hidden;
-            padding-left: 15px;
-            padding-right: 15px;
-            box-sizing: border-box;
+            overflow: hidden;   
+            width: 25%;
+            padding-right: 0px;
+            padding-left: 0px;
         }
 
         .headshot {
@@ -130,7 +130,11 @@
                 </div>
                 <div class="modal-body">
                     <img id="HeroImage">
-                    <h1 id="description" class="text-primary"></h1>
+                    <p id="hp" class="text-black"></p>
+                    <p id="movespeed" class="text-black"></p>
+                    <p id="armor" class="text-black"></p>
+                    <p id="spellblock" class="text-black"></p>
+                    <p id="attackrange" class="text-black"></p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
@@ -153,6 +157,7 @@ crossorigin="anonymous"></script>
 integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
 crossorigin="anonymous"></script>
 <script>
+    let i
     let row = document.querySelector(".row")
     let cardTemplate =document.getElementById("cardHero")
     let array = []
@@ -165,10 +170,10 @@ crossorigin="anonymous"></script>
     function XHR(){
         xhr.onload = function(){
             array = JSON.parse(this.responseText)
-            let i = Object.values(array.data)
-            debugger
+            i = Object.values(array.data)
             i.forEach((hero,index)=>{
                 row.append(getCard(hero.name,index+1,hero.id,hero.blurb))
+                
             })
         }
         xhr.open("GET",url)
@@ -177,19 +182,31 @@ crossorigin="anonymous"></script>
     function getCard(index,id,name,blurb) {
             let cloneCard =cardTemplate.content.cloneNode(true)
             cloneCard.querySelector("img").src= `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${name}_0.jpg`
-            debugger
             cloneCard.querySelector("h5").innerText = id + ':' +name +'-' +index
             cloneCard.querySelector("p").innerText = blurb
             cloneCard.querySelector("button").addEventListener('click',function(){
-                setModal(name,id,blurb)
+                setModal(
+                    i[id-1].name,
+                    i[id-1].id,
+                    "hp:"+i[id-1].stats.hp,
+                    "movespeed:"+i[id-1].stats.movespeed,
+                    "armorr:"+i[id-1].stats.armor,
+                    "spellblock:"+i[id-1].stats.spellblock,
+                    "attackrange:"+i[id].stats.attackrange
+                )
             })
             return cloneCard
         }
-        function setModal(name,id,blurb){
+        function setModal(id,name,hp,movespeed,armor,spellblock,attackrange){
             let modal =document.querySelector("#exampleModal")
-            modal.querySelector("h5").innerText = name
+            modal.querySelector("h5").innerText = id
             modal.querySelector("#HeroImage").src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${name}_0.jpg`
-            modal.querySelector("#description").innerText = blurb
+            modal.querySelector("#hp").innerText = hp
+            modal.querySelector("#movespeed").innerText = movespeed
+            modal.querySelector("#armor").innerText = armor
+            modal.querySelector("#spellblock").innerText = spellblock
+            modal.querySelector("#attackrange").innerText = attackrange
+            // debugger
         }
 </script>
 </body>
