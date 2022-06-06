@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        display: flex;
+        background-color: #000;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+    .cube{
+        position: relative;
+        transform-style: preserve-3d;
+        width: 300px;
+        height: 300px;
+        animation: roll 4s linear infinite;
+       
+    }
+    @keyframes roll{
+        0%{
+            transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+        }
+        100%{
+            transform: rotateX(-30deg) rotateY(360deg) rotateZ(360deg);
+        }
+    }
+    .roll{
+        position: absolute;
+        top:0;
+        left: 0;
+        transform-style: preserve-3d;
+        width: 100%;
+        height: 100%;
+    }
+    .cube .roll span{
+        display: flex;
+        font-size: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        transform: rotateY(calc(90deg*var(--i))) translateZ(150px);
+        justify-content: center;
+        align-items: center;
+    }
+    .top{
+        width: 100%;
+        height: 100%;
+       background-color: #fff;
+        transform: rotateX(90deg) translateZ(150px);
+    }
+    div[class^="point"]{
+        border-radius: 50%;
+        background-color: #000;
+    }
+    .point{
+        background-color: red !important;
+        width: 100px;
+        height: 100px;
+    
+    }
+    .point2:nth-child(1){
+        width: 75px;
+        height: 75px;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+    }
+    .point2:nth-child(2){
+        width: 75px;
+        height: 75px;
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+    }
+    .point6{
+        width: 50px;
+        height: 50px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .left{
+        position: absolute;
+        left: 70px;
+    }
+    .right{
+        position: absolute;
+        right: 70px;
+    }
+
+    .point5{
+        width: 60px;
+        height: 60px;
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+    .left5{
+        position: absolute;
+        left: 50px;
+    }
+    .right5{
+        position: absolute;
+        right: 50px;
+    }
+    .left4{
+        position: absolute;
+        left: 50px;
+    }
+    .right4{
+        position: absolute;
+        right: 50px;
+    }
+    .point4{
+        background-color: red !important;
+        width: 70px;
+        height: 70px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .bottom{
+        width: 100%;
+        height: 100%;
+       background-color: #fff;
+        transform: rotateX(90deg) translateZ(150px);
+    }
+    .point3{
+        background-color: #000;
+        width: 75px;
+        height: 75px;
+    }
+    .l3{
+        position: absolute;
+        top: 60px;
+        left: 60px;
+        bottom: 50px;
+        right: 50px;
+        margin: 50px;
+    }
+    .r3{
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+        margin: -10px;
+    }
+    .m3{
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        margin: -20px;
+
+    }
+    .btn{
+        width: 200px;
+        height: 100px;
+        font-size: 50px;
+        background-color: #ccc;
+        position: relative;
+        left: -400px;
+        padding-left: 50px;
+        padding-top: 20px;
+    }
+    #open:checked ~ .cube .roll span{
+        transform: rotateY(calc(90deg*var(--i))) translateZ(300px);
+        transition: 1s;
+    }
+    #open:checked ~ .cube .roll .top
+    {
+        transform: rotateX(90deg) translateZ(300px);
+        transition: 1s;
+    }
+    #open:checked ~ .cube .roll .bottom{
+        transform: rotateX(90deg) translateZ(0px);
+        transition: 1s;
+    }
+    #open{
+        display: none;
+    }
+</style>
+</head>
+<body>
+        <input type="checkbox" name="" id="open">
+        <label class="btn" for="open">
+            按我
+        </label>
+        <div class="cube">
+            <div class="roll">
+                <div class="top">
+                    <div class="left4">
+                        <div class="point4"></div>
+                        <div class="point4"></div>
+                    </div>
+                    <div class="right4">
+                        <div class="point4"></div>
+                        <div class="point4"></div>
+                    </div>
+                </div>
+                <span style="--i:0">
+                   <div class="point"></div>
+                </span>
+                <span style="--i:1">
+                    <div class="point2"></div>
+                    <div class="point2"></div>
+                </span>
+                <span style="--i:2">
+                    <div class="left">
+                        <div class="point6"></div>
+                        <div class="point6"></div>
+                        <div class="point6"></div>
+                    </div>
+                    <div class="right">
+                        <div class="point6"></div>
+                        <div class="point6"></div>
+                        <div class="point6"></div>
+                    </div>
+                </span> 
+                <span style="--i:3">
+                    <div class="left5">
+                        <div class="point5"></div>
+                        <div class="point5"></div>
+                    </div>
+                    <div class="middle5">
+                        <div class="point5"></div>
+                    </div>
+                    <div class="right5">
+                        <div class="point5"></div>
+                        <div class="point5"></div>
+                    </div>
+                </span>
+                <div class="bottom">
+                    <div class="l3">
+                        <div class="point3"></div>
+                    </div>
+                    <div class="m3">
+                        <div class="point3"></div>
+                    </div>
+                    <div class="r3">
+                        <div class="point3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
