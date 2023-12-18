@@ -102,6 +102,8 @@
     </div>
 
     <script>
+      window.addEventListener('touchstart', forceSafariPlayAudio, false);
+        let player = document.querySelector(".player");
         let container = document.querySelector(".container");
         for(let i = 0;i<=100;i++){
             let snow = document.createElement("div");
@@ -116,18 +118,32 @@
         function getRandom(max){
             return Math.floor(Math.random()*max)+1 + "px";
         };
-            window.onload = function(){
-             setInterval("toggleSound()",100);
+  function forceSafariPlayAudio() {
+            player.load(); 
+            player.play(); 
         }
-
-    function toggleSound() {
-                var music = document.querySelector(".player");//獲取ID  
-                    debugger
-                if (music.paused) { //判讀是否播放  
-                    music.paused=false;
-                    music.play(); //沒有就播放 
-                }    
-        }
+        player.addEventListener('loadstart', function() {
+            console.log('loadstart');
+        }, false);
+        player.addEventListener('loadeddata', function() {
+            console.log('loadeddata');
+        }, false);
+        player.addEventListener('loadedmetadata', function() {
+            console.log('loadedmetadata');
+        }, false);
+        player.addEventListener('canplay', function() {
+            console.log('canplay');
+        }, false);
+        player.addEventListener('play', function() {
+            console.log('play');
+            window.removeEventListener('touchstart', forceSafariPlayAudio, false);
+        }, false);
+        player.addEventListener('playing', function() {
+            console.log('playing');
+        }, false);
+        player.addEventListener('pause', function() {
+            console.log('pause');
+        }, false);
     </script>
 </body>
 </html>
