@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: darkblue;
+        }
+        .snow{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            animation: snowmove 0.3s linear infinite;
+        }
+        .player{
+            display: none;
+        }
+        .snata{
+                display: block;
+                height: 200px;
+                animation: santamove 2s linear infinite;
+            }
+        @keyframes santamove{
+            0%{
+                transform:  translate(0px,200px) rotateY(-18000deg) ;
+            }
+            25%{
+                transform:  translate(150px,666px) ;
+            }
+            50%{
+                transform:  translate(-100px,335px) ;
+            }
+            75%{
+                transform:   translate(300px,100px) rotateY(-180deg);
+            }
+            100%{
+                transform:   translate(0px,200px)  rotateY(1800deg);
+            }
+        } 
+        @keyframes snowmove{
+            0%{
+                transform:  translate(10px,10px)  ;
+            }
+            25%{
+                transform:  translate(-10px,-10px)  ;
+            }
+            50%{
+                transform:  translate(10px,0px)  ;
+            }
+            75%{
+                transform:  translate(0px,-10px)  ;
+            }
+            100%{
+                transform:   translate(10px,10px);
+            }
+        } 
+        @keyframes shine{
+            0%{
+                color: green;
+            }
+            25%{
+                color: greenyellow;
+            }
+            50%{
+                color: red;
+            }
+            75%{
+                color: yellow;
+            }
+            100%{
+                color: purple ;
+            }
+        } 
+        .text{
+            font-size: 150px;
+            color: whitesmoke;
+            position: absolute;
+            top: -150px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            text-align: center;
+            z-index: -1;
+            animation: shine 0.5s linear infinite;
+        }
+        .container{
+            position: relative;
+        }
+    </style>
+</head>
+<body >
+    <div class="container">
+        <p class="text">Xmas</p>
+    </div>
+    <div>
+        <audio src="JingleBell.mp3" class="player" controls autoplay></audio>
+        <img src="Santa.png" class="snata">
+    </div>
+
+    <script>
+        let container = document.querySelector(".container");
+        for(let i = 0;i<=100;i++){
+            let snow = document.createElement("div");
+            snow.setAttribute("class","snow");
+            snow.style.top = getRandom(920);
+            snow.style.left = getRandom(430);
+            snow.style.right =getRandom(430);
+            snow.style.bottom = getRandom(920);
+            container.appendChild(snow)
+        }
+
+        function getRandom(max){
+            return Math.floor(Math.random()*max)+1 + "px";
+        };
+    </script>
+</body>
+</html>
