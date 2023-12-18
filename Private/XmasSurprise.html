@@ -5,22 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            background-color: darkblue;
-        }
         .snow{
             width: 10px;
             height: 10px;
             border-radius: 50%;
             background-color: white;
             position: absolute;
+            display: none;
             animation: snowmove 0.3s linear infinite;
         }
         .player{
-            display: none;
+                display: none;
         }
         .snata{
-                display: block;
+                display: none;
                 height: 200px;
                 animation: santamove 2s linear infinite;
             }
@@ -86,24 +84,33 @@
             text-align: center;
             z-index: -1;
             animation: shine 0.5s linear infinite;
+            display: none;
         }
         .container{
             position: relative;
         }
+        .btn{
+            height: 50px;
+            width: 50px;
+        }
     </style>
 </head>
 <body >
+    <button class="btn">按我</button>
     <div class="container">
         <p class="text">Xmas</p>
     </div>
     <div>
-        <audio src="JingleBell.mp3" class="player" controls autoplay></audio>
+        <audio src="JingleBell.mp3" class="player" ></audio>
         <img src="Santa.png" class="snata">
     </div>
 
     <script>
-        window.addEventListener('touchstart', forceSafariPlayAudio, false);
+        let text = document.querySelector(".text");
+        let body = document.querySelector("body");
+        let btn = document.querySelector(".btn");
         let player = document.querySelector(".player");
+        let snata = document.querySelector(".snata");
         let container = document.querySelector(".container");
         for(let i = 0;i<=100;i++){
             let snow = document.createElement("div");
@@ -118,33 +125,18 @@
         function getRandom(max){
             return Math.floor(Math.random()*max)+1 + "px";
         };
-
-        function forceSafariPlayAudio() {
-            player.load(); // iOS 9   还需要额外的 load 一下, 否则直接 play 无效
-            player.play(); // iOS 7/8 仅需要 play 一下
+        btn.onclick = function(){
+            player.play();
+            body.style.backgroundColor="DarkBlue";
+            btn.style.display = "none";
+            text.style.display = "block";
+            snata.style.display = "block";
+            let snows = document.querySelectorAll(".snow")
+            snows.forEach((snow)=>{
+                snow.style.display = "block";
+            })
         }
-        player.addEventListener('loadstart', function() {
-            console.log('loadstart');
-        }, false);
-        player.addEventListener('loadeddata', function() {
-            console.log('loadeddata');
-        }, false);
-        player.addEventListener('loadedmetadata', function() {
-            console.log('loadedmetadata');
-        }, false);
-        player.addEventListener('canplay', function() {
-            console.log('canplay');
-        }, false);
-        player.addEventListener('play', function() {
-            console.log('play');
-            window.removeEventListener('touchstart', forceSafariPlayAudio, false);
-        }, false);
-        player.addEventListener('playing', function() {
-            console.log('playing');
-        }, false);
-        player.addEventListener('pause', function() {
-            console.log('pause');
-        }, false);
+
     </script>
 </body>
 </html>
