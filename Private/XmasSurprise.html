@@ -97,11 +97,14 @@
         <p class="text">Xmas</p>
     </div>
     <div>
-        <audio src="JingleBell.mp3" class="player" controls autoplay></audio>
+        <audio src="JingleBell.mp3" class="player" controls autoplay playsinline muted></audio>
         <img src="Santa.png" class="snata">
     </div>
 
     <script>
+        window.onload = function(){
+           player.muted = false;
+        }
       window.addEventListener('touchstart', forceSafariPlayAudio, false);
         let player = document.querySelector(".player");
         let container = document.querySelector(".container");
@@ -121,8 +124,6 @@
   function forceSafariPlayAudio() {
             player.load(); 
             player.play(); 
-            player.pause();
-           player.play(); 
         }
         player.addEventListener('loadstart', function() {
             console.log('loadstart');
