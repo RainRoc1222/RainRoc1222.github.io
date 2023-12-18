@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: auto;
+            padding: auto;
+            box-sizing: border-box;
+        }
+        #btn{
+            width: 150px;
+            height: 100px;
+            font-size: 20px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            border-radius: 15%;
+            border: 1cm;
+            background-color: antiquewhite;
+            box-shadow:  7px 7px bisque;
+            transition:opacity .5s;
+        }
+        .buttonFadeInOut{
+            opacity: 0;
+        }
+        #container{
+            min-height: 100vh;
+            background-color: lightcoral;
+        }
+        .containerFadeIn,.containerFadeOut{
+            animation: containerfadeout 2s 1s;
+        }
+        #newcontainer{
+            min-height: 100vh;
+            background-color: darkblue;
+            margin-top: -100vh;
+        }
+        #snowcontainer {
+            display: none;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  top: 0;
+  overflow: hidden;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.snow {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+  -webkit-animation: snow linear infinite;
+          animation: snow linear infinite;
+}
+.snow.foreground {
+  background-image: url("https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-large-075d267ecbc42e3564c8ed43516dd557.png");
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+}
+.snow.foreground.layered {
+  -webkit-animation-delay: 7.5s;
+          animation-delay: 7.5s;
+}
+.snow.middleground {
+  background-image: url(https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-medium-0b8a5e0732315b68e1f54185be7a1ad9.png);
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+}
+.snow.middleground.layered {
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+}
+.snow.background {
+  background-image: url(https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-small-1ecd03b1fce08c24e064ff8c0a72c519.png);
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+}
+.snow.background.layered {
+  -webkit-animation-delay: 15s;
+          animation-delay: 15s;
+}
+
+@-webkit-keyframes snow {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(15%, 100%, 0);
+            transform: translate3d(15%, 100%, 0);
+  }
+}
+
+@keyframes snow {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(15%, 100%, 0);
+            transform: translate3d(15%, 100%, 0);
+  }
+}
+
+        @keyframes containerfadeout{
+            0%{
+                transform: translateY(0vh);
+            }
+            50%{
+                transform: translateY(50vh);
+            }
+            100%{
+                transform: translateY(100vh);
+            }
+        }
+        .greeting{
+            font-size: 8em;
+            color: whitesmoke;
+            text-align: center;
+        }
+        #greeting3{
+            color: darkblue;
+            margin-top: 20vh;
+            animation: showtrickmessage 2s 5s;
+        }
+        #greeting4{
+            color: darkblue;
+            animation: showtrickmessage 2s 6s;
+        }
+        #greeting5,#greeting7,#greeting1{
+            margin-top: 30vh;
+        }
+        #greeting5{
+            margin-top: 20vh;
+        }
+        #greeting5,#greeting6{
+            color: darkblue;
+            font-size: 6em;
+            animation: showtrickmessage 2.5s 9s;
+        }
+        #greeting7,#greeting8{
+            text-align: center;
+            color: darkblue;
+            font-size: 6em;
+            animation: showtrickmessage 2s 12s;
+        }
+        #messagecontent{
+            display: none;
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+        }
+        @keyframes showgreetingmessage{
+            0%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+        @keyframes showtrickmessage{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                color: snow;
+                opacity: 1;
+            }
+        }
+        img{
+            display: none;
+            height: 30vh;
+            margin-top: 10vh;
+        }
+        #player{
+            display: none;
+        }
+        #santa{
+            height: 10vh;
+            display: block;
+            animation: santamove 4s linear infinite;
+        }
+        @keyframes santamove {
+            0%{
+                transform: translate(0px,0px);
+            }
+            10%{
+                transform: translate(-100px,100px) ;
+            }
+            20%{
+                transform: translate(-200px,-100px);
+            }
+            30%{
+                transform: translate(-300px,150px);
+            }
+            40%{
+                transform: translate(-400px,0px);
+            }
+            50%{
+                transform: translate(-250px,-100px) rotateY(180deg) ;
+            }
+            60%{
+                transform: translate(-100px,100px);
+            }
+            70%{
+                transform: translate(100px,100px) rotateY(1800deg);
+            }
+            80%{
+                transform: translate(0px,0px);
+            }
+            90%{
+                transform: translate(-100px,-100px) rotateX(360deg);
+            }
+            100%{
+                transform: translate(200px,50px) ;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="newcontainer">
+        <div id="messagecontent">
+            <audio src="JingleBell.mp3" id="player" loop controls></audio>
+            <p id="greeting1" class="greeting">Hey</p>
+            <p id="greeting2" class="greeting">Dona</p>
+            <p id="greeting3" class="greeting">Marry</p>
+            <p id="greeting4" class="greeting">Me</p>
+            <img src="marry.png" id="marry">
+            <p id="greeting5" class="greeting">Just</p>
+            <p id="greeting6" class="greeting">Kidding</p>
+            <img src="joke.jpg" id="joke">
+            <p id="greeting7" class="greeting">Merry</p>
+            <p id="greeting8" class="greeting">Christmas</p>
+            <img src="santa.png" id="santa">
+            <div id="snowcontainer">
+                <div class="snow foreground"></div>
+                <div class="snow foreground layered"></div>
+                <div class="snow middleground"></div>
+                <div class="snow middleground layered"></div>
+                <div class="snow background"></div>
+                <div class="snow background layered"></div>
+              </div>
+        </div>
+    </div>
+    <div id="container">
+        <button id="btn">按我</button>
+    </div>
+
+
+    <script>
+        let body = document.querySelector("body");
+
+        btn.onclick = function(){
+            player.play();
+            Transitions();
+            ShowGreetingMessage();
+        }
+        function PlayMusic(){
+        }
+
+        function RemoveContainer(){
+            body.removeChild(container);
+        }
+        function RemoveGreetingMessage(){
+            messagecontent.removeChild(greeting1)
+            messagecontent.removeChild(greeting2)
+        }
+        function RemoveGreetingMessage2(){
+            messagecontent.removeChild(greeting3)
+            messagecontent.removeChild(greeting4)
+        }
+        function ContainerFadeIn(){
+            newcontainer.style.margin = '0px';
+        }
+
+        function Transitions(){
+            btn.classList.add('buttonFadeInOut');
+            container.classList.add('containerFadeOut');
+            newcontainer.classList.add('containerFadeIn')
+            setTimeout(RemoveContainer, 3000);
+            setTimeout(ContainerFadeIn, 3000);
+        }
+
+        function ShowGreetingMessage(){
+            messagecontent.style.display='block';
+            setTimeout(RemoveGreetingMessage,5000);
+            setTimeout(ShowTrick,5000);
+            setTimeout(ShowTrick2,6000);
+            setTimeout(ShowImage,6500);
+            setTimeout(RemoveGreetingMessage2,9000);
+            setTimeout(ShowTrick3,9000);
+            setTimeout(ShowImage2,9200);
+            setTimeout(ShowRealMessage,12000);
+            setTimeout(MakeSnow,12000);
+        }
+
+        function ShowTrick(){
+            greeting3.style.display = 'block';
+            greeting3.style.color = 'snow';
+        }
+        function ShowTrick2(){
+            greeting4.style.display = 'block';
+            greeting4.style.color = 'snow';
+        }
+        function ShowImage(){
+            marry.style.display = 'block'
+        }
+        function ShowImage2(){
+            joke.style.display = 'block'
+
+        }
+        function ShowTrick3(){
+            messagecontent.removeChild(marry)
+            greeting5.style.display = 'block';
+            greeting5.style.color = 'snow';
+            greeting6.style.display = 'block';
+            greeting6.style.color = 'snow';
+        }
+        function ShowRealMessage(){
+            messagecontent.removeChild(greeting6)
+            messagecontent.removeChild(joke)
+            messagecontent.removeChild(greeting5)
+            greeting7.style.display = 'block';
+            greeting7.style.color = 'snow';
+            greeting8.style.display = 'block';
+            greeting8.style.color = 'snow';
+        }
+
+        function MakeSnow(){
+            snowcontainer.style.display='block'
+        };
+    </script>
+</body>
+</html>
