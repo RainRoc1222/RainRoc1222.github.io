@@ -97,12 +97,17 @@
         <p class="text">Xmas</p>
     </div>
     <div>
-        <audio src="JingleBell.mp3" class="player" controls autoplay></audio>
+        <audio src="JingleBell.mp3" class="player" controls autoplay playsinline muted></audio>
         <img src="Santa.png" class="snata">
     </div>
 
     <script>
-        let player = document.querySelector(".player");
+        window.onload= ()=>{
+            let player = document.querySelector(".player");
+            player.muted = false;
+            player.load(); // iOS 9   还需要额外的 load 一下, 否则直接 play 无效
+            player.play(); // iOS 7/8 仅需要 play 一下
+        }
         window.addEventListener('touchstart', forceSafariPlayAudio, false);
         let container = document.querySelector(".container");
         for(let i = 0;i<=100;i++){
@@ -119,32 +124,7 @@
             return Math.floor(Math.random()*max)+1 + "px";
         };
 
-        function forceSafariPlayAudio() {
-            player.load(); // iOS 9   还需要额外的 load 一下, 否则直接 play 无效
-            player.play(); // iOS 7/8 仅需要 play 一下
-        }
-        player.addEventListener('loadstart', function() {
-            console.log('loadstart');
-        }, false);
-        player.addEventListener('loadeddata', function() {
-            console.log('loadeddata');
-        }, false);
-        player.addEventListener('loadedmetadata', function() {
-            console.log('loadedmetadata');
-        }, false);
-        player.addEventListener('canplay', function() {
-            console.log('canplay');
-        }, false);
-        player.addEventListener('play', function() {
-            console.log('play');
-            window.removeEventListener('touchstart', forceSafariPlayAudio, false);
-        }, false);
-        player.addEventListener('playing', function() {
-            console.log('playing');
-        }, false);
-        player.addEventListener('pause', function() {
-            console.log('pause');
-        }, false);
+
     </script>
 </body>
 </html>
