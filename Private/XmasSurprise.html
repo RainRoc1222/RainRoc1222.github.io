@@ -121,6 +121,8 @@
   function forceSafariPlayAudio() {
             player.load(); 
             player.play(); 
+            player.pause();
+           player.play(); 
         }
         player.addEventListener('loadstart', function() {
             console.log('loadstart');
