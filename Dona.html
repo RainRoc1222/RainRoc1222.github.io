@@ -115,7 +115,62 @@
             transform: translate3d(15%, 100%, 0);
   }
 }
+.eInstance{
+    animation: eInstanceRemove 1.7s 7s;
+}
+@keyframes eInstanceRemove {
+        0%{
+        }
+        100%{
+            transform: translateX(500px);
+        }
+}
+.rightHand{
+    position: absolute;
+    display: block;
+    right: -300px;
+    top: 20px;
+    height: 40vh;
+    animation: rightHandMove 2s;
+}
+.topHand{
+    position: absolute;
+    display: block;
+    bottom: -350px;
+    right: 55px;
+    height: 40vh;
+    animation: topHandMove 2.7s  1.5s;
+}
+.closeHand{
+    position: absolute;
+    display: none;
+    bottom: 0px;
+    right: 0px;
+    height: 40vh;
+}
 
+@keyframes topHandMove{
+            0%{
+                bottom: -350px;
+            }
+            50%{
+                bottom: 400px;
+            }
+            100%{
+                bottom: -350px;
+            }
+        }
+        @keyframes rightHandMove{
+            0%{
+                right: -300px;
+            }
+            50%{
+                right: 20px;
+            }
+            100%{
+                right: -300px;
+            }
+        }
         @keyframes containerfadeout{
             0%{
                 transform: translateY(0vh);
@@ -132,14 +187,14 @@
             color: whitesmoke;
             text-align: center;
         }
-        #greeting3{
+        .greeting3{
             color: darkblue;
             margin-top: 20vh;
             animation: showtrickmessage 2s 5s;
         }
         #greeting4{
             color: darkblue;
-            animation: showtrickmessage 2s 6s;
+            animation: showtrickmessage 2s 9s;
         }
         #greeting5,#greeting7,#greeting1{
             margin-top: 30vh;
@@ -150,13 +205,13 @@
         #greeting5,#greeting6{
             color: darkblue;
             font-size: 6em;
-            animation: showtrickmessage 2.5s 9s;
+            animation: showtrickmessage 2.5s 12s;
         }
         #greeting7,#greeting8{
             text-align: center;
             color: darkblue;
             font-size: 6em;
-            animation: showtrickmessage 2s 12s;
+            animation: showtrickmessage 2s 16s;
         }
         #messagecontent{
             display: none;
@@ -231,6 +286,11 @@
                 transform: translate(200px,50px) ;
             }
         }
+        .trickText{
+            margin-top: 20vh;
+            margin-left: 0;
+            margin-right: 0;
+        }
     </style>
 </head>
 <body>
@@ -239,15 +299,18 @@
             <audio src="JingleBell.mp3" id="player" loop controls></audio>
             <p id="greeting1" class="greeting">Hey</p>
             <p id="greeting2" class="greeting">Dona</p>
-            <p id="greeting3" class="greeting">Marry</p>
+            <div style="display: flex; " id="controller">
+                <p class="greeting greeting3" style="margin-right: 0;">M</p>
+                <p  class="greeting trickText eInstance " style="color: darkblue;">e</p>
+                <p class="greeting trickText greeting3"  style="margin-right: 5vh;">rry</p>
+            </div>
             <p id="greeting4" class="greeting">Me</p>
-            <img src="marry.png" id="marry">
             <p id="greeting5" class="greeting">Just</p>
             <p id="greeting6" class="greeting">Kidding</p>
             <img src="joke.jpg" id="joke">
             <p id="greeting7" class="greeting">Merry</p>
             <p id="greeting8" class="greeting">Christmas</p>
-            <img src="santa.png" id="santa">
+            <img src="santa.png" id="santa" >
             <div id="snowcontainer">
                 <div class="snow foreground"></div>
                 <div class="snow foreground layered"></div>
@@ -265,9 +328,10 @@
 
     <script>
         let body = document.querySelector("body");
+        let eInstance = document.querySelector(".eInstance")
 
         btn.onclick = function(){
-            player.play();
+            //player.play();
             Transitions();
             ShowGreetingMessage();
         }
@@ -282,9 +346,16 @@
             messagecontent.removeChild(greeting2)
         }
         function RemoveGreetingMessage2(){
-            messagecontent.removeChild(greeting3)
+            messagecontent.removeChild(controller)
             messagecontent.removeChild(greeting4)
+            let close = document.querySelector(".closeHand")
+            let right = document.querySelector(".topHand")
+            let top = document.querySelector(".rightHand")
+            messagecontent.removeChild(close)
+            messagecontent.removeChild(right)
+            messagecontent.removeChild(top)
         }
+
         function ContainerFadeIn(){
             newcontainer.style.margin = '0px';
         }
@@ -300,51 +371,75 @@
         function ShowGreetingMessage(){
             messagecontent.style.display='block';
             setTimeout(RemoveGreetingMessage,5000);
-            setTimeout(ShowTrick,5000);
-            setTimeout(ShowTrick2,6000);
-            setTimeout(ShowImage,6500);
-            setTimeout(RemoveGreetingMessage2,9000);
-            setTimeout(ShowTrick3,9000);
-            setTimeout(ShowImage2,9200);
-            setTimeout(ShowRealMessage,12000);
-            setTimeout(MakeSnow,12000);
+            setTimeout(ShowMerry,5000);
+            setTimeout(ChnagedInnerTextAnimation,6000);
+            setTimeout(ShowMe,10000);
+            setTimeout(RemoveGreetingMessage2,12000);
+            setTimeout(ShowJokeImage,13500);
+            setTimeout(ShowTrick3,14000);
+            setTimeout(ShowRealMessage,16000);
         }
 
-        function ShowTrick(){
-            greeting3.style.display = 'block';
-            greeting3.style.color = 'snow';
+        function ShowMerry(){
+            SetStyle(eInstance,'block','snow')
+            let group = document.querySelectorAll(".greeting3")
+            group.forEach(item => {
+                SetStyle(item,'block','snow')
+            });
         }
-        function ShowTrick2(){
-            greeting4.style.display = 'block';
-            greeting4.style.color = 'snow';
+        function ChnagedInnerTextAnimation(){
+            CreateImage("topHand","/Image/Top.png");
+            CreateImage("rightHand","/Image/Right.png");
+            CreateImage("closeHand","/Image/Close.png");
+            setTimeout(ChangedInnerText,1500);
+            setTimeout(ShowCloseHand,3500)
+            setTimeout(CloseToOpen,4000)
         }
-        function ShowImage(){
-            marry.style.display = 'block'
+        function ChangedInnerText(){    
+            eInstance.innerText="a";
         }
-        function ShowImage2(){
+        function CloseToOpen(){
+            let close = document.querySelector(".closeHand")
+            close.src = "/Image/Open.png";
+        }
+        function ShowCloseHand(){
+            let close = document.querySelector(".closeHand")
+            close.style.display = 'block'
+        }
+        function ShowJokeImage(){
             joke.style.display = 'block'
-
+        }
+        function ShowMe(){
+            SetStyle(greeting4,'block','snow')
         }
         function ShowTrick3(){
-            messagecontent.removeChild(marry)
-            greeting5.style.display = 'block';
-            greeting5.style.color = 'snow';
-            greeting6.style.display = 'block';
-            greeting6.style.color = 'snow';
+
+            SetStyle(greeting5,'block','snow')
+            SetStyle(greeting6,'block','snow')
         }
         function ShowRealMessage(){
             messagecontent.removeChild(greeting6)
             messagecontent.removeChild(joke)
             messagecontent.removeChild(greeting5)
-            greeting7.style.display = 'block';
-            greeting7.style.color = 'snow';
-            greeting8.style.display = 'block';
-            greeting8.style.color = 'snow';
+            SetStyle(greeting7,'block','snow')
+            SetStyle(greeting8,'block','snow')
+            MakeSnow();
+        }
+
+        function SetStyle(element,display,color){
+            element.style.display = display;
+            element.style.color = color;
         }
 
         function MakeSnow(){
             snowcontainer.style.display='block'
         };
+        function CreateImage(className,src){
+            let hand = document.createElement("img");
+            hand.src = src;
+            hand.setAttribute("class",className);
+            messagecontent.appendChild(hand);
+        }
     </script>
 </body>
 </html>
