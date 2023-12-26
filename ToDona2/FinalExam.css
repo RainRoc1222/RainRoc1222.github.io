@@ -1,0 +1,124 @@
+*{
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+}
+.message{
+    position: absolute;
+    top: 18em;
+    z-index: 2;
+    left: 4em;
+    display: none;
+}
+
+.text{
+    font-size: 2em;
+    bottom: 3em;
+    left: 1.5em;
+}
+.container{
+    position: relative;
+    height: 100vh;
+    width: 46vh;
+    background-color: bisque;
+}
+.text{
+    position: absolute;
+}
+.doorcontroller{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.left-door,.right-door{
+    height: 70%;
+    width: 50%;
+    z-index: 1;
+    background-color: brown;
+    border: 4mm ridge rgba(234, 243, 59, 0.6);
+}
+.left-doorknob,.right-doorknob{
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 50%;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: 4mm solid rgba(234, 243, 59, 0.6);
+}
+.left-doorknob{
+    left: 30%;
+}
+.right-doorknob{
+    right: 30%;
+}
+.left-door-open{
+    transform-style: preserve-3d;
+    animation: leftDoorOPen 2s;
+}
+.right-door-open{
+    transform-style: preserve-3d;
+    animation: rightDoorOpen 2s;
+}
+
+.into-left-door{
+    animation: intoLeftDoor 2s;
+}
+
+.into-right-door{
+    animation: intoRightDoor 2s;
+}
+
+@keyframes leftDoorOPen {
+    50%{
+        transform:translateX(-30px);
+    }
+    100%{
+        transform: translateX(-60px) rotateY(-70deg);
+    }
+}
+@keyframes rightDoorOpen {
+    50%{
+        transform:translateX(30px) ;
+    }
+    100%{
+        transform:translateX(60px) rotateY(70deg);
+    }
+}
+
+@keyframes intoLeftDoor {
+    0%{
+    }
+    100%{
+        transform:  translateZ(-80px);
+    }
+}
+
+@keyframes intoRightDoor {
+    0%{
+    }
+    100%{
+        transform: translateZ(-80px);
+    }
+}
+
+.charlie{
+    position: absolute;
+    top: 13em;
+    left: 5em;
+    height: 20em;
+    z-index: 0;
+}
+
+.charlieMove{
+    animation: charlieMove 2s;
+}
+
+@keyframes charlieMove {
+    0%{
+    }
+    100%{
+        top: 30em;
+    }
+}
