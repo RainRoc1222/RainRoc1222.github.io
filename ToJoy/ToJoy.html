@@ -25,14 +25,16 @@
         .firstHand{
             position: fixed;
             transform: rotate(262deg);
-            top:-20vh;
+            top:-40vh;
             right: -100vh;
             animation: handMove 2s;
         }
         .closeHand{
             position: fixed;
-            right: -20vh;
+            right: -0vh;
+            top: 20vh;
             display: none;
+            height: 80%;
         }
 
         @keyframes handMove {
@@ -57,7 +59,7 @@
     .firstBallon,.secondBallon,.thirdBallon,.fourthBallon{
         position: absolute;
         height: 10em;
-        bottom: -20vh; 
+        bottom: 100vh;
     }
     .firstBallon{
         animation: ballonFly 5s 2s linear infinite;
@@ -78,7 +80,7 @@
 
     @keyframes ballonFly {
         0%{
-            bottom: -20vh;
+            bottom: 0vh;
             right: 10vh;
         }
         25%{
@@ -122,7 +124,7 @@
     function CloseToOpen(){
         let hand = document.querySelector('.closeHand');
         hand.src = "https://raw.githubusercontent.com/RainRoc1222/RainRoc1222.github.io/main/ToJoy/HBD/Open.png"
-        hand.style.right = '-30vh';
+        hand.style.right = '-15vh';
     }
     function ShowCloseHand(){
         let hand = document.querySelector('.closeHand');
