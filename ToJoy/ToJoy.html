@@ -107,8 +107,8 @@
 <script>
     let container = document.querySelector(".container");
     window.onload = function(){
-        CreateImage("/HBD/Hand.png","firstHand");
-        CreateImage("/HBD/Close.png","closeHand")
+        CreateImage("https://raw.githubusercontent.com/RainRoc1222/RainRoc1222.github.io/main/ToJoy/HBD/Hand.png","firstHand");
+        CreateImage("https://raw.githubusercontent.com/RainRoc1222/RainRoc1222.github.io/main/ToJoy/HBD/Close.png","closeHand")
         setTimeout(ShowHBD,1200)
         setTimeout(ShowCloseHand,1800);
         setTimeout(CloseToOpen,2300);
@@ -121,7 +121,7 @@
 
     function CloseToOpen(){
         let hand = document.querySelector('.closeHand');
-        hand.src = "/HBD/Open.png"
+        hand.src = "https://raw.githubusercontent.com/RainRoc1222/RainRoc1222.github.io/main/ToJoy/HBD/Open.png"
         hand.style.right = '-30vh';
     }
     function ShowCloseHand(){
