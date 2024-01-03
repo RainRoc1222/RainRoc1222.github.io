@@ -25,7 +25,7 @@
         .firstHand{
             position: fixed;
             transform: rotate(262deg);
-            top:-40vh;
+            top:-30vh;
             right: -100vh;
             animation: handMove 2s;
         }
@@ -50,10 +50,10 @@
         }
         @keyframes fade {
             0%{
-                right: -100vh;
+                transform: translateX(-20vh);
             }
             100%{
-                right: -20vh;
+                transform: translateX(200vh);
             }
 }
     .firstBallon,.secondBallon,.thirdBallon,.fourthBallon{
@@ -104,7 +104,13 @@
 </head>
 <body>
     <div class="container">
-        <p class="HBD">Happy Birthday</p>
+        <div>
+    
+        <div class="HBD">
+            <p class="happy">Happy</p>
+            <p class="birthday">Birthday</p>
+        </div>
+        </div>
     </div>
 <script>
     let container = document.querySelector(".container");
@@ -138,8 +144,7 @@
     }
     function ShowHBD(){
         let HBD = document.querySelector(".HBD");
-        HBD.style.color = "whitesmoke"
-        HBD.style.right = '0vh';
+        HBD.style.right = '10vh';
     }
 
 </script>
