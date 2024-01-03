@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: darkseagreen;
+        }
+        .HBD{
+            position: fixed;
+            font-size: 4em;
+            text-align: center;
+            top: 20vh;
+            right: -100vh;
+            color: white;
+            animation: fade 1s;
+        }
+        .firstHand{
+            position: fixed;
+            transform: rotate(262deg);
+            top:-20vh;
+            right: -100vh;
+            animation: handMove 2s;
+        }
+        .closeHand{
+            position: fixed;
+            right: -20vh;
+            display: none;
+        }
+
+        @keyframes handMove {
+            0%{
+                right: -100vh;
+            }
+            60%{
+                right: -20vh;
+            }
+            100%{
+                right: -100vh;
+            }
+        }
+        @keyframes fade {
+            0%{
+                right: -100vh;
+            }
+            100%{
+                right: -20vh;
+            }
+}
+    .firstBallon,.secondBallon,.thirdBallon,.fourthBallon{
+        position: absolute;
+        height: 10em;
+        bottom: -20vh;
+    }
+    .firstBallon{
+        animation: ballonFly 5s 2s linear infinite;
+    }
+    .secondBallon{
+        left: 7vh;
+        animation: ballonFly 5s 2.5s linear infinite;
+    }
+    .thirdBallon{
+        right: 10vh;
+        animation: ballonFly 5s 3s linear infinite;
+    }
+
+    .fourthBallon{
+        right: 0vh;
+        animation: ballonFly 5s 3.5s linear infinite;
+    }
+
+    @keyframes ballonFly {
+        0%{
+            bottom: -20vh;
+            right: 10vh;
+        }
+        25%{
+            bottom: 20vh;
+            right: 0vh;
+        }
+        50%{
+            bottom: 40vh;
+            right: 15vh;
+        }
+        75%{
+            bottom: 70vh;
+            right: 0vh;
+        }
+        100%{
+            bottom: 110vh;
+            right:20vh;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="HBD">Happy Birthday</p>
+    </div>
+<script>
+    let container = document.querySelector(".container");
+    window.onload = function(){
+        CreateImage("/Image/Hand.png","firstHand");
+        CreateImage("/Image/Close.png","closeHand")
+        setTimeout(ShowHBD,1200)
+        setTimeout(ShowCloseHand,1800);
+        setTimeout(CloseToOpen,2300);
+        CreateImage("/Image/Ballon.png","firstBallon");
+        CreateImage("/Image/Ballon.png","secondBallon");
+        CreateImage("/Image/Ballon.png","thirdBallon");
+        CreateImage("/Image/Ballon.png","fourthBallon");
+    }
+
+
+    function CloseToOpen(){
+        let hand = document.querySelector('.closeHand');
+        hand.src = "/Image/Open.png"
+        hand.style.right = '-30vh';
+    }
+    function ShowCloseHand(){
+        let hand = document.querySelector('.closeHand');
+        hand.style.display = 'block';
+    }
+    function CreateImage(src,hand){
+        let img = document.createElement("img");
+        img.src = src;
+        img.classList.add(hand);
+        container.appendChild(img);
+    }
+    function ShowHBD(){
+        let HBD = document.querySelector(".HBD");
+        HBD.style.color = "whitesmoke"
+        HBD.style.right = '0vh';
+    }
+
+</script>
+</body>
+</html>
